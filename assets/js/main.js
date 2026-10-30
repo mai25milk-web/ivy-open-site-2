@@ -1,0 +1,57 @@
+(function () {
+  'use strict';
+
+  // ハンバーガーメニュー
+  var burger = document.querySelector('.burger');
+  var nav = document.getElementById('gnav');
+
+  function setMenu(open) {
+    nav.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+  }
+
+  burger.addEventListener('click', function () {
+    setMenu(burger.getAttribute('aria-expanded') !== 'true');
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.closest('a')) setMenu(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+      setMenu(false);
+      burger.focus();
+    }
+  });
+  document.addEventListener('click', function (e) {
+    if (nav.classList.contains('is-open') && !e.target.closest('.hdr')) setMenu(false);
+  });
+
+  // 3つの特徴（スマホは横スワイプ）のドット
+  var list = document.getElementById('point-list');
+  var dots = Array.prototype.slice.call(document.querySelectorAll('#point-dots button'));
+  var items = list.querySelectorAll('.point__item');
+
+  function markDot() {
+    var left = list.scrollLeft;
+    var at = 0, best = Infinity;
+    items.forEach(function (it, i) {
+      var d = Math.abs(it.offsetLeft - list.offsetLeft - parseInt(getComputedStyle(list).paddingLeft, 10) - left);
+      if (d < best) { best = d; at = i; }
+    });
+    if (left + list.clientWidth >= list.scrollWidth - 2) at = items.length - 1;
+    dots.forEach(function (b, i) {
+      b.classList.toggle('is-on', i === at);
+      if (i === at) b.setAttribute('aria-current', 'true');
+      else b.removeAttribute('aria-current');
+    });
+  }
+
+  list.addEventListener('scroll', markDot, { passive: true });
+  dots.forEach(function (b, i) {
+    b.addEventListener('click', function () {
+      var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      list.scrollTo({ left: items[i].offsetLeft - items[0].offsetLeft, behavior: still ? 'auto' : 'smooth' });
+    });
+  });
+})();
