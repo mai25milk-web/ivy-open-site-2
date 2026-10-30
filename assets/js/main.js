@@ -55,3 +55,31 @@
     });
   });
 })();
+
+// ヒーローの幕：見終わるか、操作したら片づける。2回目以降は head のスクリプトが出さない
+(function () {
+  var root = document.documentElement;
+  if (!root.classList.contains('splash-on')) return;
+  var splash = document.querySelector('.splash');
+  var EVENTS = ['pointerdown', 'wheel', 'touchmove', 'keydown'];
+  var timer;
+
+  function remember() {
+    try { sessionStorage.setItem('ivySplash', '1'); } catch (e) {}
+  }
+  function stopListening() {
+    EVENTS.forEach(function (ev) { window.removeEventListener(ev, skip); });
+    clearTimeout(timer);
+  }
+  function skip() {
+    stopListening();
+    remember();
+    root.classList.add('skip');
+  }
+  EVENTS.forEach(function (ev) { window.addEventListener(ev, skip, { passive: true }); });
+  timer = setTimeout(function () {
+    stopListening();
+    remember();
+    if (splash) splash.style.display = 'none';
+  }, 3400);
+})();
