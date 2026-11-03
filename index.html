@@ -17,9 +17,10 @@
 .hero__side--a{clip-path:url(#clip-hero-a)}
 .hero__side--b{clip-path:url(#clip-hero-b)}
 .think__media{clip-path:url(#clip-think)}
+/* SP は上下を入れ替える（上＝大人の後ろ姿、下＝子どもの手元） */
 @media (max-width:767px){
-  .hero__side--a{clip-path:url(#clip-hero-a-sp)}
-  .hero__side--b{clip-path:url(#clip-hero-b-sp)}
+  .hero__side--a{clip-path:url(#clip-hero-b-sp)}
+  .hero__side--b{clip-path:url(#clip-hero-a-sp)}
 }
 </style>
 </head>
@@ -28,14 +29,11 @@
 <!-- 共通のSVG定義（斜線・ドット・ブロブの形・アイコン） -->
 <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
   <defs>
-    <pattern id="st-blue" width="11" height="11" patternUnits="userSpaceOnUse"><path d="M-3 3 3-3M0 11 11 0M8 14l6-6" stroke="#3398d0" stroke-width="4"/></pattern>
-    <pattern id="st-yellow" width="11" height="11" patternUnits="userSpaceOnUse"><path d="M-3 3 3-3M0 11 11 0M8 14l6-6" stroke="#f5d84a" stroke-width="4"/></pattern>
     <pattern id="st-coral" width="11" height="11" patternUnits="userSpaceOnUse"><path d="M-3 3 3-3M0 11 11 0M8 14l6-6" stroke="#ee7a5f" stroke-width="4"/></pattern>
-    <pattern id="st-green" width="11" height="11" patternUnits="userSpaceOnUse"><path d="M-3 3 3-3M0 11 11 0M8 14l6-6" stroke="#3e8e5a" stroke-width="4"/></pattern>
+    <pattern id="st-green" width="11" height="11" patternUnits="userSpaceOnUse"><path d="M-3 3 3-3M0 11 11 0M8 14l6-6" stroke="#2f7046" stroke-width="4"/></pattern>
     <pattern id="st-white" width="11" height="11" patternUnits="userSpaceOnUse"><path d="M-3 3 3-3M0 11 11 0M8 14l6-6" stroke="#fff" stroke-opacity=".25" stroke-width="4"/></pattern>
-    <pattern id="dot-yellow" width="13" height="26" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="3.5" fill="#f5d84a"/><circle cx="10" cy="16.5" r="3.5" fill="#f5d84a"/></pattern>
     <pattern id="dot-coral" width="12" height="24" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="3.5" fill="#ee7a5f"/><circle cx="9.5" cy="15.5" r="3.5" fill="#ee7a5f"/></pattern>
-    <pattern id="dot-green" width="13" height="26" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="3.5" fill="#3e8e5a"/><circle cx="10" cy="16.5" r="3.5" fill="#3e8e5a"/></pattern>
+    <pattern id="dot-green" width="13" height="26" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="3.5" fill="#2f7046"/><circle cx="10" cy="16.5" r="3.5" fill="#2f7046"/></pattern>
 
     <clipPath id="blob-a" clipPathUnits="objectBoundingBox"><path d="M.5 0C.74 0 .96.13 1 .4 1.03.68.86.95.58.99.3 1.03.05.87.01.56-.02.27.2 0 .5 0Z"/></clipPath>
     <clipPath id="blob-b" clipPathUnits="objectBoundingBox"><path d="M.46 0C.68-.01.9.1.97.33 1.04.56.95.8.76.93.57 1.02.33 1.01.17.9 0 .78-.02.52.02.32.07.1.26.01.46 0Z"/></clipPath>
@@ -48,8 +46,8 @@
     <clipPath id="clip-hero-b-sp" clipPathUnits="objectBoundingBox" transform="scale(.00279330 .00208333)"><path d="M0 480H358V228C300 278 210 270 150 254 90 238 40 232 0 257Z"/></clipPath>
     <clipPath id="clip-think" clipPathUnits="objectBoundingBox" transform="scale(.00212766 .00208333)"><path d="M200 0C275-1 335 40 395 95 450 145 470 215 470 290 470 370 435 430 385 455 365 466 340 475 305 475H120C50 470 0 395 0 300V190C5 90 90 2 200 0Z"/></clipPath>
 
-    <symbol id="i-leaf" viewBox="0 0 38 37"><path fill="#3e8e5a" d="M19 0c6 0 9 5 8 10 6-1 11 3 11 9 0 8-8 14-19 18C8 33 0 27 0 19c0-6 5-10 11-9-1-5 2-10 8-10Z"/><path fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" d="M19 12v24M19 27l-8-7M19 27l8-7"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="currentColor"/><path fill="none" stroke="var(--arrow,#3e8e5a)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m10 7.5 4.5 4.5-4.5 4.5"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 38 37"><path fill="#2f7046" d="M19 0c6 0 9 5 8 10 6-1 11 3 11 9 0 8-8 14-19 18C8 33 0 27 0 19c0-6 5-10 11-9-1-5 2-10 8-10Z"/><path fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" d="M19 12v24M19 27l-8-7M19 27l8-7"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="currentColor"/><path fill="none" stroke="var(--arrow,#2f7046)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m10 7.5 4.5 4.5-4.5 4.5"/></symbol>
     <symbol id="i-insta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="1.5" y="1.5" width="21" height="21" rx="6"/><circle cx="12" cy="12" r="5"/></g><circle cx="18" cy="6" r="1.4" fill="currentColor"/></symbol>
   </defs>
 </svg>
@@ -83,41 +81,43 @@
 
 <main id="top">
 
-  <!-- 02 ヒーロー -->
+  <!-- 02 ヒーロー（左／上：造形、右／下：絵画。人物の位置に合わせて写真の左右を決めている） -->
   <section class="hero">
     <div class="hero__visual">
       <div class="hero__side hero__side--a">
         <picture>
-          <source media="(max-width:767px)" srcset="assets/img/hero-painting-sp.webp" width="716" height="600">
-          <img src="assets/img/hero-painting.webp" width="1740" height="1160" alt="窓辺の木のテーブルで、エプロン姿の女性が微笑みながら水彩で風景を描いている" fetchpriority="high">
+          <source media="(max-width:767px)" srcset="assets/img/hero-making-sp.webp" width="750" height="500">
+          <img src="assets/img/hero-making.webp" width="1536" height="1024" alt="作業台で、粘土の台に木片を組み合わせて立体をつくっている子どもの手元" fetchpriority="high">
         </picture>
       </div>
       <div class="hero__side hero__side--b">
         <picture>
-          <source media="(max-width:767px)" srcset="assets/img/hero-making-sp.webp" width="716" height="556">
-          <img src="assets/img/hero-making.webp" width="1600" height="1160" alt="絵の具で手を汚した子ども二人が、色を塗った木の積み木と粘土で塔をつくって笑っている">
+          <source media="(max-width:767px)" srcset="assets/img/hero-painting-sp.webp" width="750" height="500">
+          <img src="assets/img/hero-painting.webp" width="1536" height="1024" alt="窓辺の机で、水彩の風景を描いている大人の後ろ姿">
         </picture>
       </div>
       <svg class="hero__line hero__line--pc" viewBox="0 0 1360 580" preserveAspectRatio="none" aria-hidden="true"><path d="M750 0C700 80 695 180 692 290 690 400 670 510 600 580"/></svg>
       <svg class="hero__line hero__line--sp" viewBox="0 0 358 480" preserveAspectRatio="none" aria-hidden="true"><path d="M358 228C300 278 210 270 150 254 90 238 40 232 0 257"/></svg>
       <span class="hero__scroll" aria-hidden="true"></span>
       <div class="hero__label hero__label--a">
-        <p class="hero__label-en" lang="en">PAINTING</p>
-        <p class="hero__label-ttl">絵画 —</p>
-        <p class="hero__label-txt">絵の具や筆で、絵を描く</p>
-      </div>
-      <div class="hero__label hero__label--b">
         <p class="hero__label-en" lang="en">MAKING</p>
         <p class="hero__label-ttl">造形 —</p>
         <p class="hero__label-txt">粘土や木で、形をつくる</p>
       </div>
+      <div class="hero__label hero__label--b">
+        <p class="hero__label-en" lang="en">PAINTING</p>
+        <p class="hero__label-ttl">絵画 —</p>
+        <p class="hero__label-txt">絵の具や筆で、絵を描く</p>
+      </div>
     </div>
-    <svg class="blob blob--hero-st" aria-hidden="true"><rect width="100%" height="100%" fill="url(#st-blue)" clip-path="url(#blob-a)"/></svg>
-    <svg class="blob blob--hero-dot" aria-hidden="true"><rect width="100%" height="100%" fill="url(#dot-yellow)" clip-path="url(#blob-b)"/></svg>
+    <svg class="blob blob--hero-st" aria-hidden="true"><rect width="100%" height="100%" fill="url(#st-green)" clip-path="url(#blob-a)"/></svg>
+    <svg class="blob blob--hero-dot" aria-hidden="true"><rect width="100%" height="100%" fill="url(#dot-coral)" clip-path="url(#blob-b)"/></svg>
     <div class="hero__body">
+      <p class="hero__area">横浜市旭区中白根</p>
       <h1 class="hero__name"><span class="vh">横浜市旭区中白根の絵画・造形教室 </span>アイビーオープン</h1>
-      <p class="hero__sub">絵画・造形教室</p>
-      <p class="hero__lead">横浜市旭区中白根の、<br class="sp">小学生から大人までの絵画・造形教室</p>
+      <p class="hero__sub">小学生から大人までの絵画・造形教室</p>
+      <p class="hero__lead">油絵・水彩・パステルから、粘土・紙・木工まで。<br>いろいろな材料で、描いて、つくれる教室です</p>
+      <a class="btn btn--main hero__cta" href="#trial">体験を申し込む<svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
     <a class="hero__badge" href="#trial"><span class="hero__badge-en" lang="en">Trial</span><span class="hero__badge-ja">体験受付中</span></a>
     <svg class="hero__wave" viewBox="0 0 1440 69" preserveAspectRatio="none" aria-hidden="true"><path d="M0 9C110 1 230 0 340 2 450 4 540 15 650 15 800 15 930 1 1050 1 1200 1 1340 3 1440 8V69H0Z"/></svg>
@@ -170,7 +170,7 @@
   <section class="hello">
     <div class="hello__in">
       <div class="hello__txt">
-        <h2 class="ttl"><span class="ttl__en" lang="en">Hello</span><span class="ttl__ja bar-yellow">旭区に、絵画教室ができました</span></h2>
+        <h2 class="ttl"><span class="ttl__en" lang="en">Hello</span><span class="ttl__ja bar-coral">旭区に絵画教室ができました</span></h2>
         <p class="body">「近くに絵を習える場所がない」。そんな声に応えて、旭区中白根の「古道カフェ ヱンルゥト」で教室をはじめました。学校帰りに、仕事の合間に。月に3回の金曜日、歩いて通える場所で、描いたりつくったりする時間をすごしませんか。</p>
       </div>
       <div class="hello__media">
@@ -185,7 +185,7 @@
 
   <!-- 05 3つの特徴 -->
   <section class="sec sec--beige point">
-    <svg class="blob blob--point pc-only" aria-hidden="true"><rect width="100%" height="100%" fill="url(#st-yellow)" clip-path="url(#blob-c)"/></svg>
+    <svg class="blob blob--point pc-only" aria-hidden="true"><rect width="100%" height="100%" fill="url(#st-coral)" clip-path="url(#blob-c)"/></svg>
     <h2 class="ttl ttl--center"><span class="ttl__en" lang="en">Point</span><span class="ttl__ja bar-green">アイビーオープンの3つの特徴</span></h2>
     <div class="point__list" id="point-list">
       <article class="point__item">
@@ -193,15 +193,25 @@
           <source media="(max-width:767px)" srcset="assets/img/point-material-sp.webp" width="560" height="400">
           <img src="assets/img/point-material.webp" width="800" height="560" loading="lazy" alt="色とりどりの粘土、木片、色紙、筆、絵の具が机いっぱいに広がっている">
         </picture>
-        <h3 class="point__head"><span class="point__no" lang="en">01</span>素材を、横断する</h3>
-        <p>絵の具、木、ボード、粘土、紙。平面にとどまらず、立体まで。描きたいもの・作りたいものに合わせて、素材から選びます。</p>
+        <h3 class="point__head"><span class="point__no" lang="en">01</span>いろいろな材料でつくれる</h3>
+        <p>平面の絵から、立体の造形まで。描きたいもの・作りたいものに合わせて、材料から選べます。</p>
+        <div class="mats">
+          <p class="mats__ttl">描く材料</p>
+          <ul class="mats__list">
+            <li>油絵</li><li>アクリル</li><li>水彩</li><li>鉛筆</li><li>色鉛筆</li><li>パステル</li>
+          </ul>
+          <p class="mats__ttl mats__ttl--make">つくる材料</p>
+          <ul class="mats__list mats__list--make">
+            <li>粘土</li><li>紙</li><li>木工</li>
+          </ul>
+        </div>
       </article>
       <article class="point__item">
         <picture>
           <source media="(max-width:767px)" srcset="assets/img/point-small-sp.webp" width="560" height="400">
           <img src="assets/img/point-small.webp" width="800" height="560" loading="lazy" alt="窓辺の木の机に、描きかけの水彩画と筆、白い粘土の器と小さな木片が置かれている">
         </picture>
-        <h3 class="point__head"><span class="point__no" lang="en">02</span>少人数で、一人ずつ</h3>
+        <h3 class="point__head"><span class="point__no" lang="en">02</span>少人数で一人ずつ</h3>
         <p>月ごとのテーマはありますが、進め方は一人ひとり違っていい。自由課題にも対応し、興味と習熟度に合わせて教えます。</p>
       </article>
       <article class="point__item">
@@ -220,7 +230,7 @@
   <!-- 06 子どもに育てたい力 -->
   <section class="think">
     <div class="think__in">
-      <h2 class="ttl think__ttl"><span class="ttl__en" lang="en">Think</span><span class="ttl__ja bar-blue">つくることで、考える力を</span></h2>
+      <h2 class="ttl think__ttl"><span class="ttl__en" lang="en">Think</span><span class="ttl__ja bar-green">つくることで考える力を</span></h2>
       <div class="think__fig">
         <div class="think__media">
           <picture>
@@ -228,7 +238,7 @@
             <img src="assets/img/think-model.webp" width="1000" height="960" loading="lazy" alt="木片を組んでつくった、建物のような小さな立体作品">
           </picture>
         </div>
-        <svg class="blob blob--think" aria-hidden="true"><rect width="100%" height="100%" fill="url(#st-blue)" clip-path="url(#blob-a)"/></svg>
+        <svg class="blob blob--think" aria-hidden="true"><rect width="100%" height="100%" fill="url(#dot-coral)" clip-path="url(#blob-a)"/></svg>
       </div>
       <div class="think__body">
         <p class="body">作ることは、考えること。どう組めば立つか、どの色を重ねればそう見えるか。手を動かしながら予測を立て、試して、直す。その繰り返しが、まだ世の中にないものを生み出す力になります。</p>
@@ -244,8 +254,8 @@
   <!-- 07 講師紹介 -->
   <section class="sec--beige teacher" id="teacher">
     <div class="teacher__card">
-      <svg class="blob blob--teacher pc-only" aria-hidden="true"><rect width="100%" height="100%" fill="url(#dot-yellow)" clip-path="url(#blob-a)"/></svg>
-      <h2 class="ttl teacher__ttl"><span class="ttl__en" lang="en">Teacher</span><span class="ttl__ja bar-yellow">講師紹介</span></h2>
+      <svg class="blob blob--teacher pc-only" aria-hidden="true"><rect width="100%" height="100%" fill="url(#dot-green)" clip-path="url(#blob-a)"/></svg>
+      <h2 class="ttl teacher__ttl"><span class="ttl__en" lang="en">Teacher</span><span class="ttl__ja bar-coral">講師紹介</span></h2>
       <div class="teacher__media">
         <picture>
           <source media="(max-width:767px)" srcset="assets/img/teacher-still-sp.webp" width="636" height="560">
@@ -288,7 +298,7 @@
         <div><dt>月謝（大人）</dt><dd>9,000円</dd></div>
         <div><dt>入会金</dt><dd>5,000円</dd></div>
         <div><dt>年会費</dt><dd>なし</dd></div>
-        <div><dt>体験レッスン</dt><dd><span class="tag tag--check">要確認</span></dd></div>
+        <div><dt>体験レッスン</dt><dd class="price__tbd">【要確認：体験レッスンの料金】</dd></div>
       </dl>
       <div class="price__time">
         <div><p class="price__cls price__cls--adult">大人クラス</p><p class="price__when">第1〜第3金曜 13:30〜15:00</p></div>
@@ -301,7 +311,7 @@
   <!-- 10 よくある質問 -->
   <section class="sec faq">
     <svg class="blob blob--faq pc-only" aria-hidden="true"><rect width="100%" height="100%" fill="url(#st-green)" clip-path="url(#blob-c)"/></svg>
-    <h2 class="ttl ttl--center"><span class="ttl__en" lang="en">Q&amp;A</span><span class="ttl__ja bar-blue">よくある質問</span></h2>
+    <h2 class="ttl ttl--center"><span class="ttl__en" lang="en">Q&amp;A</span><span class="ttl__ja bar-green">よくある質問</span></h2>
     <dl class="faq__list">
       <div>
         <dt><span class="faq__mark faq__mark--q" lang="en">Q</span>絵を習うのは初めてです。大丈夫ですか？</dt>
@@ -309,15 +319,15 @@
       </div>
       <div>
         <dt><span class="faq__mark faq__mark--q" lang="en">Q</span>画材は持っていく必要がありますか？</dt>
-        <dd><span class="faq__mark faq__mark--a" lang="en">A</span><span>スターターセットの販売があります。体験の持ち物は確認中です。<span class="tag tag--check tag--sm">要確認</span></span></dd>
+        <dd><span class="faq__mark faq__mark--a" lang="en">A</span><span>スターターセットの販売があります。体験の持ち物は【要確認：体験レッスンの持ち物】</span></dd>
       </div>
       <div>
         <dt><span class="faq__mark faq__mark--q" lang="en">Q</span>見学だけでもできますか？</dt>
-        <dd><span class="faq__mark faq__mark--a" lang="en">A</span><span>確認中です。<span class="tag tag--check tag--sm">要確認</span></span></dd>
+        <dd><span class="faq__mark faq__mark--a" lang="en">A</span><span>【要確認：見学の可否】</span></dd>
       </div>
       <div>
         <dt><span class="faq__mark faq__mark--q" lang="en">Q</span>お休みした回の振替はできますか？</dt>
-        <dd><span class="faq__mark faq__mark--a" lang="en">A</span><span>確認中です。<span class="tag tag--check tag--sm">要確認</span></span></dd>
+        <dd><span class="faq__mark faq__mark--a" lang="en">A</span><span>【要確認：振替の可否とルール】</span></dd>
       </div>
     </dl>
   </section>
@@ -326,7 +336,7 @@
   <section class="sec--beige access" id="access">
     <div class="access__card">
       <div class="access__info">
-        <h2 class="ttl"><span class="ttl__en" lang="en">Access</span><span class="ttl__ja bar-yellow">教室までのアクセス</span></h2>
+        <h2 class="ttl"><span class="ttl__en" lang="en">Access</span><span class="ttl__ja bar-coral">教室までのアクセス</span></h2>
         <dl class="access__list">
           <div><dt>会場</dt><dd>古道カフェ ヱンルゥト 内</dd></div>
           <div><dt>住所</dt><dd>横浜市旭区中白根2-13-32 金子ハイツC-101</dd></div>
@@ -340,7 +350,7 @@
           <g class="w3"><path d="M124 10 119 390M278 10 294 390M432 10 430 390M10 44 470 41M10 171 470 183M10 302 470 304"/></g>
         </svg>
         <div class="map__center">
-          <svg class="map__pin" viewBox="0 0 36 56" aria-hidden="true"><path fill="#3e8e5a" d="M18 0C8 0 0 8 0 18c0 12 12 26 18 38 6-12 18-26 18-38C36 8 28 0 18 0Z"/><circle cx="18" cy="18" r="7" fill="#fff"/></svg>
+          <svg class="map__pin" viewBox="0 0 36 56" aria-hidden="true"><path fill="#2f7046" d="M18 0C8 0 0 8 0 18c0 12 12 26 18 38 6-12 18-26 18-38C36 8 28 0 18 0Z"/><circle cx="18" cy="18" r="7" fill="#fff"/></svg>
           <a class="map__btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A8%AA%E6%B5%9C%E5%B8%82%E6%97%AD%E5%8C%BA%E4%B8%AD%E7%99%BD%E6%A0%B92-13-32" target="_blank" rel="noopener">Google マップで見る</a>
         </div>
       </div>
@@ -349,10 +359,10 @@
 
   <!-- 12 体験申込 -->
   <section class="trial" id="trial">
-    <svg class="blob blob--trial-dot" aria-hidden="true"><rect width="100%" height="100%" fill="url(#dot-yellow)" clip-path="url(#blob-a)"/></svg>
+    <svg class="blob blob--trial-dot" aria-hidden="true"><rect width="100%" height="100%" fill="url(#dot-coral)" clip-path="url(#blob-a)"/></svg>
     <svg class="blob blob--trial-st" aria-hidden="true"><rect width="100%" height="100%" fill="url(#st-white)" clip-path="url(#blob-a)"/></svg>
     <h2 class="trial__ttl"><span class="trial__en" lang="en">Trial</span><span class="trial__ja">まずは体験から</span></h2>
-    <p class="trial__lead">まずは体験レッスンから。<br class="sp">内容と料金は確認中です。</p>
+    <p class="trial__lead">まずは体験レッスンから。<br class="sp">【要確認：体験レッスンの内容と料金】</p>
     <div class="trial__btns">
       <a class="btn btn--white" href="https://www.instagram.com/painting.art.class/" target="_blank" rel="noopener">体験を申し込む<svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <a class="btn btn--ghost" href="https://www.instagram.com/painting.art.class/" target="_blank" rel="noopener"><svg class="btn__ig" aria-hidden="true"><use href="#i-insta"/></svg>InstagramのDMで相談</a>

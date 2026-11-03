@@ -81,7 +81,7 @@
     stopListening();
     remember();
     if (splash) splash.style.display = 'none';
-  }, 3400);
+  }, 2000);
 })();
 
 // Instagram の埋め込みは読み込み後に高さが変わるので、スクロール位置を計算し直す
@@ -89,4 +89,14 @@
   var box = document.querySelector('.ig-embeds'), t;
   if (!box || !window.ScrollTrigger || !window.ResizeObserver) return;
   new ResizeObserver(function () { clearTimeout(t); t = setTimeout(function () { ScrollTrigger.refresh(); }, 200); }).observe(box);
+})();
+
+// スマホ下端の固定ボタンは、ヒーローの「体験を申し込む」が見えている間は隠す（同じボタンを2つ並べない）
+(function () {
+  var cta = document.querySelector('.hero__cta');
+  var fix = document.querySelector('.fixcta');
+  if (!cta || !fix || !window.IntersectionObserver) return;
+  new IntersectionObserver(function (es) {
+    fix.classList.toggle('is-hidden', es[0].isIntersecting);
+  }).observe(cta);
 })();
