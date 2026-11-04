@@ -1,13 +1,13 @@
 /* ② アイビーオープン TOP：くすんだ緑（メイン）＋淡い黄色（アクセント）＋グレー。アーチの写真と広い余白 */
 :root{
   --s4:4px;--s8:8px;--s12:12px;--s16:16px;--s24:24px;--s32:32px;--s40:40px;--s48:48px;--s56:56px;--s64:64px;--s72:72px;--s80:80px;--s96:96px;--s120:120px;--s160:160px;
-  --main:#9cc3af;      /* 面の色（文字は乗せない） */
+  --main:#bfdccd;      /* 面の色（文字は乗せない） */
   --main-d:#2f6650;    /* 文字・ボタン */
   --main-dd:#1f4535;   /* 緑の面の上の文字 */
   --pale:#e7f1ec;      /* 淡い緑の地 */
   --sub:#f6e3a1;       /* アクセント：淡い黄色（面だけ） */
   --sub-pale:#fbf4da;
-  --gray:#c9cecc;
+  --gray:#e1e5e3;
   --ink:#383e3c;--muted:#59605d;--line:#d3ddd8;
   --jp:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;
   --en:"Quicksand","Zen Maru Gothic",sans-serif;
