@@ -268,6 +268,24 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .teacher__name{font-size:18px;line-height:28px;font-weight:700;color:var(--main-dd)}
 @media (min-width:768px){.teacher__name{font-size:20px;line-height:32px}}
 .teacher__name{margin-bottom:var(--s16)}
+/* 講師の制作実績：大きさをそろえない並び（横長の大1、縦長、横長） */
+.works__ttl{margin:var(--s64) 0 var(--s24);font-size:18px;line-height:28px;font-weight:700;color:var(--main-dd)}
+@media (min-width:768px){.works__ttl{font-size:20px;line-height:32px}}
+.works{display:grid;grid-template-columns:1fr 1fr;gap:var(--s16)}
+.works__item img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.works__item--l{grid-column:1 / -1}
+@media (max-width:767px){.works__item:last-child{grid-column:1 / -1}.works__item:last-child img{aspect-ratio:16/9}}
+.works__item span{display:block;margin-top:var(--s8);font-size:13px;line-height:24px;color:var(--ink)}
+@media (min-width:768px){
+  .works{grid-template-columns:repeat(4,1fr);gap:var(--s24)}
+  .works__item--l{grid-column:span 2;grid-row:span 2}
+  .works__item--l img{aspect-ratio:auto;height:calc(100% - var(--s32))}
+  .works__item--t{grid-row:span 2}
+  .works__item--t img{height:calc(100% - var(--s32));aspect-ratio:auto}
+  .works__item--w{grid-column:span 2}
+  .works__item--w img{aspect-ratio:16/9}
+}
+.works + p .more{margin-top:var(--s16)}
 
 /* Instagram */
 .ig-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s16)}
