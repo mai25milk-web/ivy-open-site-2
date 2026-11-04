@@ -36,21 +36,6 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // ふわっと出る
-  var items = document.querySelectorAll('.reveal');
-  if (!document.documentElement.classList.contains('motion') || !('IntersectionObserver' in window)) {
-    items.forEach(function (el) { el.classList.add('is-in'); });
-    return;
-  }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) {
-      if (en.isIntersecting) {
-        en.target.classList.add('is-in');
-        io.unobserve(en.target);
-      }
-    });
-  }, { rootMargin: '0px 0px -10% 0px' });
-  items.forEach(function (el) { io.observe(el); });
 })();
 
 // Instagramの埋め込みは、その欄に近づいてから読み込む（最初の表示を軽くする）
