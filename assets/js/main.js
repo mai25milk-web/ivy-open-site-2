@@ -52,3 +52,20 @@
   }, { rootMargin: '0px 0px -10% 0px' });
   items.forEach(function (el) { io.observe(el); });
 })();
+
+// Instagramの埋め込みは、その欄に近づいてから読み込む（最初の表示を軽くする）
+(function () {
+  var sec = document.querySelector('.insta');
+  if (!sec) return;
+  function load() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.instagram.com/embed.js';
+    document.body.appendChild(s);
+  }
+  if (!('IntersectionObserver' in window)) { load(); return; }
+  var io = new IntersectionObserver(function (entries) {
+    if (entries[0].isIntersecting) { io.disconnect(); load(); }
+  }, { rootMargin: '800px 0px' });
+  io.observe(sec);
+})();
