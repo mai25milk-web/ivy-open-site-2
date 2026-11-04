@@ -414,3 +414,40 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .motion .works__item:nth-child(4) img{transition-delay:.38s}
 .motion .works__item:nth-child(5) img{transition-delay:.12s}
 .motion .works__item:nth-child(6) img{transition-delay:.26s}
+
+/* 開いたときの幕（そのタブで初めて開いたときと再読み込みのときだけ）
+   濃い緑の幕に教室名が出て、幕が左右（スマホは上下）に開き、写真がキャンバスに置かれるように入る */
+.curtain{display:none}
+.motion.intro .curtain{position:fixed;inset:0;z-index:100;display:grid;place-items:center;pointer-events:none;animation:cur-hide 0s 2.6s forwards}
+.curtain__p{position:absolute;top:0;bottom:0;width:50.5%;background:var(--main-dd)}
+.curtain__p--l{left:0;animation:cur-l 1s 1.2s cubic-bezier(.76,0,.24,1) forwards}
+.curtain__p--r{right:0;animation:cur-r 1s 1.2s cubic-bezier(.76,0,.24,1) forwards}
+.curtain__mark{position:relative;display:flex;flex-direction:column;align-items:center;color:#fff;text-align:center;animation:cur-mark 1.2s cubic-bezier(.2,.7,.2,1) both}
+.curtain__leaf{width:48px;height:48px;margin-bottom:var(--s16);color:var(--main)}
+.curtain__sub{font-size:14px;line-height:24px;letter-spacing:.24em}
+.curtain__name{margin-top:var(--s4);font-weight:700;font-size:28px;line-height:40px;letter-spacing:.16em}
+@media (max-width:767px){
+  .curtain__p{width:auto;left:0;right:0;height:50.5%}
+  .curtain__p--l{top:0;bottom:auto;animation-name:cur-t}
+  .curtain__p--r{top:auto;bottom:0;animation-name:cur-b}
+}
+@keyframes cur-mark{0%{opacity:0;transform:translateY(16px)}35%,70%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-8px)}}
+@keyframes cur-l{to{transform:translateX(-100%)}}
+@keyframes cur-r{to{transform:translateX(100%)}}
+@keyframes cur-t{to{transform:translateY(-100%)}}
+@keyframes cur-b{to{transform:translateY(100%)}}
+@keyframes cur-hide{to{visibility:hidden}}
+.curtain.is-skip{display:none!important}
+
+/* 幕が開いたあとのFV：写真は傾いて小さい状態から置かれ、黄色い面があとから後ろにずれる */
+@keyframes fv-place-l{from{transform:scale(.6) rotate(-10deg)}to{transform:none}}
+@keyframes fv-place-r{from{transform:scale(.6) rotate(10deg)}to{transform:none}}
+@keyframes fv-back{from{transform:translate(calc(var(--s24) * -1),calc(var(--s24) * -1))}to{transform:none}}
+@keyframes fv-rise{from{opacity:.01;transform:translateY(32px)}to{opacity:1;transform:none}}
+.motion.intro .hero__side--l .hero__ph{animation:fv-place-l 1s 1.5s cubic-bezier(.2,.7,.2,1) both}
+.motion.intro .hero__side--r .hero__ph{animation:fv-place-r 1s 1.65s cubic-bezier(.2,.7,.2,1) both}
+.motion.intro .hero__ph::before{animation:fv-back .7s 2.3s cubic-bezier(.2,.7,.2,1) both}
+.motion.intro .hero__pre{animation:fv-rise .8s 1.8s cubic-bezier(.2,.7,.2,1) both}
+.motion.intro .hero__main{animation:fv-rise .8s 1.95s cubic-bezier(.2,.7,.2,1) both}
+.motion.intro .hero__tag{animation:fv-up .6s 2.5s both}
+.motion.intro .hero__foot{animation:fv-up .6s 2.3s both}

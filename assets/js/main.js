@@ -69,3 +69,15 @@
   }, { rootMargin: '0px 0px -15% 0px' });
   for (var j = 0; j < els.length; j++) io.observe(els[j]);
 })();
+
+// 開いたときの幕は、操作したらすぐ消す
+(function () {
+  var c = document.querySelector('.curtain');
+  if (!c || !document.documentElement.classList.contains('intro')) return;
+  var ev = ['pointerdown', 'keydown', 'wheel', 'touchmove'];
+  function skip() {
+    c.classList.add('is-skip');
+    ev.forEach(function (t) { window.removeEventListener(t, skip); });
+  }
+  ev.forEach(function (t) { window.addEventListener(t, skip, { passive: true }); });
+})();
