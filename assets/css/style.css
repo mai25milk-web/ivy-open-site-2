@@ -1,18 +1,18 @@
 /* ② アイビー TOP：くすんだ緑（メイン）＋淡い黄色（アクセント）＋グレー。アーチの写真と広い余白 */
 :root{
   --s4:4px;--s8:8px;--s16:16px;--s24:24px;--s32:32px;--s40:40px;--s48:48px;--s56:56px;--s64:64px;--s72:72px;--s80:80px;--s96:96px;--s120:120px;--s160:160px;
-  --main:#bfdccd;      /* 面の色（文字は乗せない） */
-  --main-d:#2f6650;    /* 文字・ボタン */
-  --main-dd:#1f4535;   /* 緑の面の上の文字 */
-  --pale:#e7f1ec;      /* 淡い緑の地 */
-  --sub:#f6e3a1;       /* アクセント：淡い黄色（面だけ） */
-  --sub-pale:#fbf4da;
-  --gray:#e1e5e3;
-  --main-m:#9cc3af;    /* 淡い緑の地の上の飾り */
+  --main:#c5dbff;      /* 面の色（空色）（文字は乗せない） */
+  --main-d:#2b5c8f;    /* 文字・ボタン */
+  --main-dd:#063152;   /* 紺の面の上の文字 */
+  --pale:#eaf1ff;      /* 淡い空色の地 */
+  --sub:#eee4d4;       /* アクセント：ベージュ（面だけ） */
+  --sub-pale:#f9f4e5;
+  --gray:#f9f4e5;
+  --main-m:#9cbceb;    /* 淡い空色の地の上の飾り */
   --drop-l:58% 42% 50% 50% / 48% 54% 46% 52%;  /* ヒーローの写真：絵の具のしずくのような丸 */
   --drop-r:42% 58% 50% 50% / 54% 48% 52% 46%;
   --canvas:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .028 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");  /* 画用紙のざらつき */
-  --ink:#383e3c;--muted:#59605d;--line:#d3ddd8;
+  --ink:#2e3440;--muted:#5a6170;--line:#d5deec;
   --jp:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;
   --en:"Quicksand","Zen Maru Gothic",sans-serif;
   --hdr:80px;--hero-mid:560px;--page-x:16px;
@@ -262,7 +262,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 @media (min-width:768px){.pt__ttl{font-size:20px;line-height:32px}}
 
 /* 考える力 */
-.think{padding-block:var(--s80);background:var(--main-d);color:#fff}
+.think{padding-block:var(--s80);background:var(--main);color:var(--main-dd)}
 .think__in{display:grid;gap:var(--s24)}
 .think__ttl{font-size:28px;line-height:44px;font-weight:700;letter-spacing:.08em}
 .think p{max-width:34em;line-height:2.2}
@@ -338,9 +338,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .more--s{margin-top:var(--s8);font-size:14px}
 
 /* 体験 */
-.trial{overflow:hidden;background:#2a2f2d;color:#fff}
+.trial{overflow:hidden;background:#063152;color:#fff}
 .trial__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.trial::before{content:"";position:absolute;inset:0;z-index:1;background:rgba(0,0,0,.5)}
+.trial::before{content:"";position:absolute;inset:0;z-index:1;background:rgba(6,49,82,.55)}
 .trial .wrap{z-index:2}
 .trial .ttl,.trial .lead{color:#fff}
 .trial .btn--line{border-color:#fff}
@@ -419,11 +419,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
    濃い緑の幕に教室名が出て、幕が左右（スマホは上下）に開き、写真がキャンバスに置かれるように入る */
 .curtain{display:none}
 .motion.intro .curtain{position:fixed;inset:0;z-index:100;display:grid;place-items:center;pointer-events:none;animation:cur-hide 0s 2.6s forwards}
-.curtain__p{position:absolute;top:0;bottom:0;width:50.5%;background:var(--main-dd)}
+.curtain__p{position:absolute;top:0;bottom:0;width:50.5%;background:var(--main)}
 .curtain__p--l{left:0;animation:cur-l 1s 1.2s cubic-bezier(.76,0,.24,1) forwards}
 .curtain__p--r{right:0;animation:cur-r 1s 1.2s cubic-bezier(.76,0,.24,1) forwards}
-.curtain__mark{position:relative;display:flex;flex-direction:column;align-items:center;color:#fff;text-align:center;animation:cur-mark 1.2s cubic-bezier(.2,.7,.2,1) both}
-.curtain__leaf{width:48px;height:48px;margin-bottom:var(--s16);color:var(--main)}
+.curtain__mark{position:relative;display:flex;flex-direction:column;align-items:center;color:var(--main-dd);text-align:center;animation:cur-mark 1.2s cubic-bezier(.2,.7,.2,1) both}
+.curtain__leaf{width:48px;height:48px;margin-bottom:var(--s16);color:var(--main-d)}
 .curtain__sub{font-size:14px;line-height:24px;letter-spacing:.24em}
 .curtain__name{margin-top:var(--s4);font-weight:700;font-size:28px;line-height:40px;letter-spacing:.16em}
 @media (max-width:767px){
