@@ -121,9 +121,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .logo__sub{font-size:11px;line-height:16px;letter-spacing:.16em}
 .gnav{margin-left:auto}
 .gnav ul{display:flex;gap:var(--s4)}
-.gnav a{display:flex;flex-direction:column;align-items:center;padding:var(--s8) var(--s16);color:var(--main-dd);text-decoration:none}
-.gnav [lang="en"]{font-family:var(--en);font-weight:700;font-size:13px;line-height:20px;letter-spacing:.16em;text-transform:uppercase}
-.gnav__ja{font-size:11px;line-height:16px;letter-spacing:.08em}
+.gnav a{display:flex;flex-direction:column;align-items:center;gap:var(--s4);padding:var(--s8) var(--s16);color:var(--main-dd);text-decoration:none}
+.gnav [lang="en"]{font-family:var(--en);font-weight:700;font-size:15px;line-height:24px;letter-spacing:.16em;text-transform:uppercase}
+.gnav__ja{font-size:13px;line-height:16px;letter-spacing:.08em}
 .gnav a:hover [lang="en"]{text-decoration:underline;text-underline-offset:4px}
 .btn--hdr{min-height:48px;padding:var(--s8) var(--s56) var(--s8) var(--s24);background:var(--main-d);color:#fff;font-size:14px}
 .btn--hdr .btn__ico{right:var(--s8)}
@@ -158,8 +158,16 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .hero__side--r .hero__ph{margin-left:var(--s16)}
 .hero__side--l img{object-position:30% 50%}
 .hero__side--r img{object-position:72% 50%}
+@media (max-width:767px){
+  .hero__split{grid-template-columns:1fr;grid-template-rows:208px 192px;height:400px}
+  .hero__side{overflow:visible;padding-bottom:0}
+  .hero__ph{width:144px}
+  .hero__side--l{z-index:2;justify-content:flex-start;padding-left:var(--s24)}
+  .hero__side--l .hero__ph{margin:0 0 calc(var(--s64) * -1)}
+  .hero__side--r{justify-content:flex-end;padding:0 var(--s40) var(--s24) 0}
+  .hero__side--r .hero__ph{margin:0}
+}
 .hero__body{position:relative;z-index:2;padding:var(--s24) var(--page-x) 0;text-align:center}
-.hero__area{font-size:13px;line-height:24px;letter-spacing:.24em;color:var(--main-d);font-weight:700}
 .hero__catch{margin-top:var(--s4);font-weight:700;font-size:36px;line-height:48px;letter-spacing:.12em;color:var(--main-dd)}
 .hero__catch span{display:block}
 .hero__name{margin-top:var(--s16);font-size:18px;line-height:28px;font-weight:700;letter-spacing:.08em;color:var(--ink)}
@@ -186,7 +194,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   .hero__split{height:600px}
   .hero__ph{width:360px}
   .hero__catch{font-size:56px;line-height:80px}
-  .hero__area{font-size:14px}
   .hero__name{font-size:20px;line-height:32px}
 }
 @media (min-width:1280px){
