@@ -5,233 +5,210 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>横浜市旭区中白根の絵画教室・造形教室｜アイビーオープン</title>
-<script>(function(){try{if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;var d=document.documentElement,seen=null;try{seen=sessionStorage.getItem("ivySplash")}catch(e){}d.classList.add("motion");if(!seen&&!location.hash)d.classList.add("splash-on")}catch(e){}})();</script>
+<script>(function(){try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("motion")}catch(e){}})();</script>
 <meta name="description" content="横浜市旭区中白根の、小学生から大人までの絵画・造形教室">
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Darumadrop+One&amp;family=Zen+Maru+Gothic:wght@400;700;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&amp;family=Zen+Maru+Gothic:wght@400;500;700&amp;display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
-<style>
-/* url(#id) は外部CSSだと環境によって解決先が変わるので、ここに置く */
-.hero__side--a{clip-path:url(#clip-hero-a)}
-.hero__side--b{clip-path:url(#clip-hero-b)}
-.think__media{clip-path:url(#clip-think)}
-/* SP は上下を入れ替える（上＝大人の後ろ姿、下＝子どもの手元） */
-@media (max-width:767px){
-  .hero__side--a{clip-path:url(#clip-hero-b-sp)}
-  .hero__side--b{clip-path:url(#clip-hero-a-sp)}
-}
-</style>
 </head>
 <body>
 
-<!-- 共通のSVG定義（斜線・ドット・ブロブの形・アイコン） -->
 <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
   <defs>
-    <pattern id="st-coral" width="11" height="11" patternUnits="userSpaceOnUse"><path d="M-3 3 3-3M0 11 11 0M8 14l6-6" stroke="#c9b1df" stroke-width="4"/></pattern>
-    <pattern id="st-green" width="11" height="11" patternUnits="userSpaceOnUse"><path d="M-3 3 3-3M0 11 11 0M8 14l6-6" stroke="#96eec3" stroke-width="4"/></pattern>
-    <pattern id="st-white" width="11" height="11" patternUnits="userSpaceOnUse"><path d="M-3 3 3-3M0 11 11 0M8 14l6-6" stroke="#fff" stroke-opacity=".25" stroke-width="4"/></pattern>
-    <pattern id="dot-coral" width="12" height="24" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="3.5" fill="#c9b1df"/><circle cx="9.5" cy="15.5" r="3.5" fill="#c9b1df"/></pattern>
-    <pattern id="dot-green" width="13" height="26" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="3.5" fill="#96eec3"/><circle cx="10" cy="16.5" r="3.5" fill="#96eec3"/></pattern>
-
-    <clipPath id="blob-a" clipPathUnits="objectBoundingBox"><path d="M.5 0C.74 0 .96.13 1 .4 1.03.68.86.95.58.99.3 1.03.05.87.01.56-.02.27.2 0 .5 0Z"/></clipPath>
-    <clipPath id="blob-b" clipPathUnits="objectBoundingBox"><path d="M.46 0C.68-.01.9.1.97.33 1.04.56.95.8.76.93.57 1.02.33 1.01.17.9 0 .78-.02.52.02.32.07.1.26.01.46 0Z"/></clipPath>
-    <clipPath id="blob-c" clipPathUnits="objectBoundingBox"><path d="M.2.05C.42-.04.72-.02.88.14 1.02.29 1.01.56.98.74.95.93.72.99.48 1 .26 1 .05.98.01.75-.02.5.02.14.2.05Z"/></clipPath>
-
-    <!-- ヒーローのS字（PC：左右、SP：上下）。objectBoundingBox なので幅に追従する -->
-    <clipPath id="clip-hero-a" clipPathUnits="objectBoundingBox" transform="scale(.000735294 .00172414)"><path d="M0 0H750C700 80 695 180 692 290 690 400 670 510 600 580H0Z"/></clipPath>
-    <clipPath id="clip-hero-b" clipPathUnits="objectBoundingBox" transform="scale(.000735294 .00172414)"><path d="M1360 0H750C700 80 695 180 692 290 690 400 670 510 600 580H1360Z"/></clipPath>
-    <clipPath id="clip-hero-a-sp" clipPathUnits="objectBoundingBox" transform="scale(.00279330 .00208333)"><path d="M0 0H358V228C300 278 210 270 150 254 90 238 40 232 0 257Z"/></clipPath>
-    <clipPath id="clip-hero-b-sp" clipPathUnits="objectBoundingBox" transform="scale(.00279330 .00208333)"><path d="M0 480H358V228C300 278 210 270 150 254 90 238 40 232 0 257Z"/></clipPath>
-    <clipPath id="clip-think" clipPathUnits="objectBoundingBox" transform="scale(.00212766 .00208333)"><path d="M200 0C275-1 335 40 395 95 450 145 470 215 470 290 470 370 435 430 385 455 365 466 340 475 305 475H120C50 470 0 395 0 300V190C5 90 90 2 200 0Z"/></clipPath>
-
-    <symbol id="i-leaf" viewBox="0 0 38 37"><path fill="#2b7a4b" d="M19 0c6 0 9 5 8 10 6-1 11 3 11 9 0 8-8 14-19 18C8 33 0 27 0 19c0-6 5-10 11-9-1-5 2-10 8-10Z"/><path fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" d="M19 12v24M19 27l-8-7M19 27l8-7"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="currentColor"/><path fill="none" stroke="var(--arrow,#2b7a4b)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m10 7.5 4.5 4.5-4.5 4.5"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 38 37"><path fill="currentColor" d="M19 0c6 0 9 5 8 10 6-1 11 3 11 9 0 8-8 14-19 18C8 33 0 27 0 19c0-6 5-10 11-9-1-5 2-10 8-10Z"/><path fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" d="M19 12v24M19 27l-8-7M19 27l8-7"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="currentColor"/><path fill="none" stroke="var(--arrow,#2f6650)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m13.5 10 6 6-6 6"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m7 10 5 5 5-5"/></symbol>
     <symbol id="i-insta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="1.5" y="1.5" width="21" height="21" rx="6"/><circle cx="12" cy="12" r="5"/></g><circle cx="18" cy="6" r="1.4" fill="currentColor"/></symbol>
   </defs>
 </svg>
 
-<div class="splash" aria-hidden="true"><div class="splash__logo"><span class="splash__name">アイビーオープン</span><span class="splash__sub">絵画・造形教室</span></div></div>
 <header class="hdr">
   <div class="hdr__in">
     <a class="logo" href="#top">
       <svg class="logo__mark" aria-hidden="true"><use href="#i-leaf"/></svg>
       <span class="logo__txt">
         <span class="logo__name">アイビーオープン</span>
-        <span class="logo__sub">絵画・造形教室アイビーオープン</span>
+        <span class="logo__sub">絵画・造形教室</span>
       </span>
     </a>
     <nav class="gnav" id="gnav" aria-label="メインメニュー">
       <ul>
-        <li><a href="#classes">子どもクラス</a></li>
-        <li><a href="#classes">大人クラス</a></li>
-        <li><a href="#teacher">講師紹介</a></li>
-        <li><a href="#price">料金</a></li>
-        <li><a href="#access">アクセス</a></li>
+        <li><a href="#about"><span lang="en">About</span><span class="gnav__ja">教室について</span></a></li>
+        <li><a href="#classes"><span lang="en">Class</span><span class="gnav__ja">クラス</span></a></li>
+        <li><a href="#materials"><span lang="en">Material</span><span class="gnav__ja">材料</span></a></li>
+        <li><a href="#teacher"><span lang="en">Teacher</span><span class="gnav__ja">講師紹介</span></a></li>
+        <li><a href="#price"><span lang="en">Price</span><span class="gnav__ja">料金</span></a></li>
+        <li><a href="#access"><span lang="en">Access</span><span class="gnav__ja">アクセス</span></a></li>
       </ul>
     </nav>
     <a class="btn btn--hdr" href="#trial">体験を申し込む<svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     <button class="burger" type="button" aria-expanded="false" aria-controls="gnav" aria-label="メニューを開く">
       <span class="burger__bars"><i></i><i></i><i></i></span>
-      <span class="burger__txt" lang="en">menu</span>
     </button>
   </div>
 </header>
 
 <main id="top">
 
-  <!-- 02 ヒーロー（左／上：造形、右／下：絵画。人物の位置に合わせて写真の左右を決めている） -->
+  <!-- ヒーロー：左＝緑（つくる）、右＝グレー（描く）。アーチの写真と、中央のコピー -->
   <section class="hero">
-    <div class="hero__visual">
-      <div class="hero__side hero__side--a">
-        <picture>
-          <source media="(max-width:767px)" srcset="assets/img/hero-making-sp.webp" width="750" height="500">
+    <div class="hero__split">
+      <div class="hero__side hero__side--l">
+        <figure class="arch hero__arch">
           <img src="assets/img/hero-making.webp" width="1536" height="1024" alt="作業台で、粘土の台に木片を組み合わせて立体をつくっている子どもの手元" fetchpriority="high">
-        </picture>
+        </figure>
+        <p class="hero__tate" aria-hidden="true">いろ</p>
       </div>
-      <div class="hero__side hero__side--b">
-        <picture>
-          <source media="(max-width:767px)" srcset="assets/img/hero-painting-sp.webp" width="750" height="500">
+      <div class="hero__side hero__side--r">
+        <figure class="arch hero__arch">
           <img src="assets/img/hero-painting.webp" width="1536" height="1024" alt="窓辺の机で、水彩の風景を描いている大人の後ろ姿">
-        </picture>
+        </figure>
+        <p class="hero__tate" aria-hidden="true">かたち</p>
       </div>
-      <svg class="hero__line hero__line--pc" viewBox="0 0 1360 580" preserveAspectRatio="none" aria-hidden="true"><path d="M750 0C700 80 695 180 692 290 690 400 670 510 600 580"/></svg>
-      <svg class="hero__line hero__line--sp" viewBox="0 0 358 480" preserveAspectRatio="none" aria-hidden="true"><path d="M358 228C300 278 210 270 150 254 90 238 40 232 0 257"/></svg>
-      <span class="hero__scroll" aria-hidden="true"></span>
     </div>
-    <svg class="blob blob--hero-st" aria-hidden="true"><rect width="100%" height="100%" fill="url(#st-green)" clip-path="url(#blob-a)"/></svg>
-    <svg class="blob blob--hero-dot" aria-hidden="true"><rect width="100%" height="100%" fill="url(#dot-coral)" clip-path="url(#blob-b)"/></svg>
     <div class="hero__body">
       <p class="hero__area">横浜市旭区中白根</p>
-      <p class="hero__catch"><span>9つの材料で</span><span>気持ちをかたちに</span></p>
-      <h1 class="hero__name"><span class="vh">横浜市旭区中白根の</span>小学生から大人までの絵画・造形教室<span class="hero__name-brand">アイビーオープン</span></h1>
-      <p class="hero__lead">絵の具で描く日も、粘土でつくる日も。<br>一人ひとりの「やってみたい」から始める、<br class="sp">子どもと大人の絵画・造形教室です。</p>
-      <a class="btn btn--main hero__cta" href="#trial">体験を申し込む<svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <p class="hero__catch"><span>気持ちを</span><span>いろとかたちに</span></p>
+      <h1 class="hero__name"><span class="vh">横浜市旭区中白根の</span>小学生から大人までの<br class="sp">絵画・造形教室<span class="hero__brand">アイビーオープン</span></h1>
     </div>
-    <a class="hero__badge" href="#trial"><span class="hero__badge-en" lang="en">Trial</span><span class="hero__badge-ja">体験受付中</span></a>
-    <svg class="hero__wave" viewBox="0 0 1440 69" preserveAspectRatio="none" aria-hidden="true"><path d="M0 9C110 1 230 0 340 2 450 4 540 15 650 15 800 15 930 1 1050 1 1200 1 1340 3 1440 8V69H0Z"/></svg>
+    <div class="hero__foot">
+      <p class="hero__lead">油絵・水彩・パステルから、粘土・紙・木工まで。<br class="pc">9つの材料で、描いて、つくれる教室です。</p>
+      <a class="btn btn--main" href="#trial">体験を申し込む<svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
   </section>
 
-  <!-- 03 2つのクラス -->
-  <section class="sec sec--beige classes" id="classes">
-    <svg class="blob blob--class pc-only" aria-hidden="true"><rect width="100%" height="100%" fill="url(#dot-coral)" clip-path="url(#blob-b)"/></svg>
-    <h2 class="ttl ttl--center"><span class="ttl__en" lang="en">Class</span><span class="ttl__ja bar-green">2つのクラス</span></h2>
-    <p class="lead">年齢に合わせて、2つのクラスがあります。<br class="sp">くわしい時間と料金は、下の表でご覧ください。</p>
-    <div class="cards">
-      <article class="card card--kids">
-        <div class="card__img">
-          <picture>
-            <source media="(max-width:767px)" srcset="assets/img/class-kids-sp.webp" width="684" height="380">
+  <!-- 教室について -->
+  <section class="sec about" id="about">
+    <span class="shape shape--a1" aria-hidden="true"></span>
+    <span class="shape shape--a2" aria-hidden="true"></span>
+    <span class="shape shape--a3" aria-hidden="true"></span>
+    <span class="shape shape--a4" aria-hidden="true"></span>
+    <div class="wrap about__row about__row--1">
+      <div class="about__head reveal">
+        <p class="label" lang="en">About</p>
+        <h2 class="about__ttl">横浜市旭区に<br>絵画教室ができました</h2>
+      </div>
+      <figure class="about__ph about__ph--1 reveal">
+        <img src="assets/img/hello-table.webp" width="1080" height="760" loading="lazy" alt="明るい部屋の木の大きなテーブルに、絵の具、粘土、スケッチブック、木の板が用意されている">
+      </figure>
+    </div>
+    <div class="wrap about__row about__row--2">
+      <figure class="about__ph about__ph--2 reveal">
+        <img src="assets/img/point-small.webp" width="800" height="560" loading="lazy" alt="窓辺の木の机に、描きかけの水彩画と筆、白い粘土の器と小さな木片が置かれている">
+      </figure>
+      <div class="about__txt reveal">
+        <p>「近くに絵を習える場所がない」。そんな声に応えて、横浜市旭区中白根の「古道カフェ ヱンルゥト」で教室をはじめました。学校帰りに、仕事の合間に。月に3回の金曜日、歩いて通える場所で、描いたりつくったりする時間をすごしませんか。</p>
+        <a class="more" href="#classes"><span lang="en">View more</span><span class="more__line" aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2つのクラス -->
+  <section class="sec sec--pale classes" id="classes">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label" lang="en">Class</p>
+        <h2 class="ttl">年齢に合わせた2つのクラス</h2>
+        <p class="lead">くわしい時間と料金は、下の表でご覧ください。</p>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <figure class="card__img">
             <img src="assets/img/class-kids.webp" width="1160" height="640" loading="lazy" alt="クラフト紙の上に、木と家を描いた絵と、絵の具のパレット、筆立て、小石と木片が並んでいる">
-          </picture>
-        </div>
-        <div class="card__body">
-          <p class="card__en" lang="en">Kids</p>
-          <div class="card__head">
-            <h3 class="card__name">子どもクラス</h3>
-            <span class="tag tag--coral">小学1〜6年生</span>
+          </figure>
+          <div class="card__body">
+            <p class="card__en" lang="en">Kids</p>
+            <h3 class="card__name">子どもクラス<span class="tag">小学1〜6年生</span></h3>
+            <p>描いて、つくって、考える力を育てる。</p>
+            <a class="more" href="#price"><span>料金と時間を見る</span><span class="more__line" aria-hidden="true"></span></a>
           </div>
-          <p class="card__txt">描いて、つくって、考える力を育てる。</p>
-          <a class="card__go" href="#price"><span class="card__arrow" aria-hidden="true"><svg viewBox="0 0 15 29"><path d="M1 1l13 13.500L1 28"/></svg></span><span class="card__go-txt">料金と時間を見る</span></a>
-        </div>
-      </article>
-      <article class="card card--adult">
-        <div class="card__img">
-          <picture>
-            <source media="(max-width:767px)" srcset="assets/img/class-adult-sp.webp" width="684" height="380">
+        </article>
+        <article class="card reveal">
+          <figure class="card__img">
             <img src="assets/img/class-adult.webp" width="1160" height="640" loading="lazy" alt="木のイーゼルに立てかけた、くすんだ緑の山と谷を描いた油彩画">
-          </picture>
-        </div>
-        <div class="card__body">
-          <p class="card__en" lang="en">Adult</p>
-          <div class="card__head">
-            <h3 class="card__name">大人クラス</h3>
-            <span class="tag tag--green">大人</span>
+          </figure>
+          <div class="card__body">
+            <p class="card__en" lang="en">Adult</p>
+            <h3 class="card__name">大人クラス<span class="tag">大人</span></h3>
+            <p>昔好きだった絵を、基礎からもう一度。</p>
+            <a class="more" href="#price"><span>料金と時間を見る</span><span class="more__line" aria-hidden="true"></span></a>
           </div>
-          <p class="card__txt">昔好きだった絵を、基礎からもう一度。</p>
-          <a class="card__go" href="#price"><span class="card__arrow" aria-hidden="true"><svg viewBox="0 0 15 29"><path d="M1 1l13 13.500L1 28"/></svg></span><span class="card__go-txt">料金と時間を見る</span></a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- 04 近くに教室ができた -->
-  <section class="hello">
-    <div class="hello__in">
-      <div class="hello__txt">
-        <h2 class="ttl"><span class="ttl__en" lang="en">Hello</span><span class="ttl__ja bar-coral">横浜市旭区に絵画教室ができました</span></h2>
-        <p class="body">「近くに絵を習える場所がない」。そんな声に応えて、横浜市旭区中白根の「古道カフェ ヱンルゥト」で教室をはじめました。学校帰りに、仕事の合間に。月に3回の金曜日、歩いて通える場所で、描いたりつくったりする時間をすごしませんか。</p>
-      </div>
-      <div class="hello__media">
-        <picture>
-          <source media="(max-width:767px)" srcset="assets/img/hello-table-sp.webp" width="684" height="460">
-          <img src="assets/img/hello-table.webp" width="1080" height="760" loading="lazy" alt="明るい部屋の木の大きなテーブルに、絵の具、粘土、スケッチブック、木の板が用意されている">
-        </picture>
-        <svg class="blob blob--hello" aria-hidden="true"><rect width="100%" height="100%" fill="url(#dot-coral)" clip-path="url(#blob-b)"/></svg>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- 05 3つの特徴 -->
-  <section class="sec sec--beige point">
-    <svg class="blob blob--point pc-only" aria-hidden="true"><rect width="100%" height="100%" fill="url(#st-coral)" clip-path="url(#blob-c)"/></svg>
-    <h2 class="ttl ttl--center"><span class="ttl__en" lang="en">Point</span><span class="ttl__ja bar-green">アイビーオープンの3つの特徴</span></h2>
-    <div class="point__list" id="point-list">
-      <article class="point__item">
-        <picture>
-          <source media="(max-width:767px)" srcset="assets/img/point-material-sp.webp" width="560" height="400">
-          <img src="assets/img/point-material.webp" width="800" height="560" loading="lazy" alt="色とりどりの粘土、木片、色紙、筆、絵の具が机いっぱいに広がっている">
-        </picture>
-        <h3 class="point__head"><span class="point__no" lang="en">01</span>いろいろな材料でつくれる</h3>
-        <p>平面の絵から、立体の造形まで。描きたいもの・作りたいものに合わせて、材料から選べます。</p>
-        <div class="mats">
-          <p class="mats__ttl">描く材料</p>
-          <ul class="mats__list">
-            <li>油絵</li><li>アクリル</li><li>水彩</li><li>鉛筆</li><li>色鉛筆</li><li>パステル</li>
-          </ul>
-          <p class="mats__ttl mats__ttl--make">つくる材料</p>
-          <ul class="mats__list mats__list--make">
-            <li>粘土</li><li>紙</li><li>木工</li>
-          </ul>
+  <!-- 9つの材料 -->
+  <section class="sec sec--pale materials" id="materials">
+    <div class="wrap">
+      <div class="mat-card reveal">
+        <p class="mat-card__tab" aria-hidden="true"><span class="mat-card__num">9</span><span class="mat-card__tt">つの材料</span></p>
+        <div class="sec-head sec-head--center">
+          <p class="label" lang="en">Material</p>
+          <h2 class="ttl">描く材料とつくる材料</h2>
+          <p class="lead">平面の絵から、立体の造形まで。<br class="sp">描きたいもの・作りたいものに合わせて、<br class="sp">材料から選べます。</p>
         </div>
-      </article>
-      <article class="point__item">
-        <picture>
-          <source media="(max-width:767px)" srcset="assets/img/point-small-sp.webp" width="560" height="400">
-          <img src="assets/img/point-small.webp" width="800" height="560" loading="lazy" alt="窓辺の木の机に、描きかけの水彩画と筆、白い粘土の器と小さな木片が置かれている">
-        </picture>
-        <h3 class="point__head"><span class="point__no" lang="en">02</span>少人数で一人ずつ</h3>
-        <p>月ごとのテーマはありますが、進め方は一人ひとり違っていい。自由課題にも対応し、興味と習熟度に合わせて教えます。</p>
-      </article>
-      <article class="point__item">
-        <img src="assets/img/point-artist.webp" width="800" height="560" loading="lazy" alt="クラフト紙の上に、風景画、鉛筆の静物デッサン、粘土の器、木の造形の4つの作品が並んでいる">
-        <h3 class="point__head"><span class="point__no" lang="en">03</span>現役の壁画アーティストが教える</h3>
-        <p>講師は日本画出身の壁画アーティスト。手描き壁画やアートパネルを制作する現場の技術を、教室でそのまま伝えます。</p>
-      </article>
-    </div>
-    <div class="point__dots" id="point-dots">
-      <button type="button" class="is-on" aria-label="特徴1を表示" aria-current="true"></button>
-      <button type="button" aria-label="特徴2を表示"></button>
-      <button type="button" aria-label="特徴3を表示"></button>
+        <h3 class="mat-group">描く材料</h3>
+        <ul class="mats">
+          <li><span class="mats__no" lang="en">01</span><span class="mats__c"><img src="assets/img/mats/mat-oil.webp" width="160" height="160" loading="lazy" alt=""></span><span class="mats__name">油絵</span></li>
+          <li><span class="mats__no" lang="en">02</span><span class="mats__c"><img src="assets/img/mats/mat-acrylic.webp" width="160" height="160" loading="lazy" alt=""></span><span class="mats__name">アクリル</span></li>
+          <li><span class="mats__no" lang="en">03</span><span class="mats__c"><img src="assets/img/mats/mat-watercolor.webp" width="160" height="160" loading="lazy" alt=""></span><span class="mats__name">水彩</span></li>
+          <li><span class="mats__no" lang="en">04</span><span class="mats__c"><img src="assets/img/mats/mat-pencil.webp" width="160" height="160" loading="lazy" alt=""></span><span class="mats__name">鉛筆</span></li>
+          <li><span class="mats__no" lang="en">05</span><span class="mats__c"><img src="assets/img/mats/mat-colorpencil.webp" width="160" height="160" loading="lazy" alt=""></span><span class="mats__name">色鉛筆</span></li>
+          <li><span class="mats__no" lang="en">06</span><span class="mats__c"><img src="assets/img/mats/mat-pastel.webp" width="160" height="160" loading="lazy" alt=""></span><span class="mats__name">パステル</span></li>
+        </ul>
+        <h3 class="mat-group">つくる材料</h3>
+        <ul class="mats">
+          <li><span class="mats__no" lang="en">07</span><span class="mats__c"><img src="assets/img/mats/mat-clay.webp" width="160" height="160" loading="lazy" alt=""></span><span class="mats__name">粘土</span></li>
+          <li><span class="mats__no" lang="en">08</span><span class="mats__c"><img src="assets/img/mats/mat-paper.webp" width="160" height="160" loading="lazy" alt=""></span><span class="mats__name">紙</span></li>
+          <li><span class="mats__no" lang="en">09</span><span class="mats__c"><img src="assets/img/mats/mat-wood.webp" width="160" height="160" loading="lazy" alt=""></span><span class="mats__name">木工</span></li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- 06 子どもに育てたい力 -->
-  <section class="think">
-    <div class="think__in">
-      <h2 class="ttl think__ttl"><span class="ttl__en" lang="en">Think</span><span class="ttl__ja bar-green">つくることで考える力を</span></h2>
-      <div class="think__fig">
-        <div class="think__media">
-          <picture>
-            <source media="(max-width:767px)" srcset="assets/img/think-model-sp.webp" width="600" height="560">
-            <img src="assets/img/think-model.webp" width="1000" height="960" loading="lazy" alt="木片を組んでつくった、建物のような小さな立体作品">
-          </picture>
-        </div>
-        <svg class="blob blob--think" aria-hidden="true"><rect width="100%" height="100%" fill="url(#dot-coral)" clip-path="url(#blob-a)"/></svg>
+  <!-- 3つの特徴 -->
+  <section class="sec point">
+    <div class="wrap">
+      <div class="sec-head sec-head--center reveal">
+        <p class="label" lang="en">Point</p>
+        <h2 class="ttl">アイビーオープンの3つの特徴</h2>
       </div>
-      <div class="think__body">
-        <p class="body">作ることは、考えること。どう組めば立つか、どの色を重ねればそう見えるか。手を動かしながら予測を立て、試して、直す。その繰り返しが、まだ世の中にないものを生み出す力になります。</p>
+      <div class="points">
+        <article class="pt reveal">
+          <figure class="pt__ph"><img src="assets/img/point-material.webp" width="800" height="560" loading="lazy" alt="色とりどりの粘土、木片、色紙、筆、絵の具が机いっぱいに広がっている"></figure>
+          <p class="pt__no" lang="en">01</p>
+          <h3 class="pt__ttl">いろいろな材料で<wbr>つくれる</h3>
+          <p>9つの材料から、描きたいもの・作りたいものに合わせて選べます。</p>
+        </article>
+        <article class="pt reveal">
+          <figure class="pt__ph"><img src="assets/img/point-small.webp" width="800" height="560" loading="lazy" alt="窓辺の木の机に、描きかけの水彩画と筆、白い粘土の器と小さな木片が置かれている"></figure>
+          <p class="pt__no" lang="en">02</p>
+          <h3 class="pt__ttl">少人数で一人ずつ</h3>
+          <p>月ごとのテーマはありますが、進め方は一人ひとり違っていい。自由課題にも対応し、興味と習熟度に合わせて教えます。</p>
+        </article>
+        <article class="pt reveal">
+          <figure class="pt__ph"><img src="assets/img/point-artist.webp" width="800" height="560" loading="lazy" alt="クラフト紙の上に、風景画、鉛筆の静物デッサン、粘土の器、木の造形の4つの作品が並んでいる"></figure>
+          <p class="pt__no" lang="en">03</p>
+          <h3 class="pt__ttl">現役の壁画アーティストが<wbr>教える</h3>
+          <p>講師は日本画出身の壁画アーティスト。手描き壁画やアートパネルを制作する現場の技術を、教室でそのまま伝えます。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- つくることで考える力を -->
+  <section class="sec think">
+    <div class="wrap think__in">
+      <figure class="arch think__arch reveal">
+        <img src="assets/img/think-model.webp" width="1000" height="960" loading="lazy" alt="木片を組んでつくった、建物のような小さな立体作品">
+      </figure>
+      <div class="think__body reveal">
+        <p class="label" lang="en">Think</p>
+        <h2 class="ttl">つくることで考える力を</h2>
+        <p>作ることは、考えること。どう組めば立つか、どの色を重ねればそう見えるか。手を動かしながら予測を立て、試して、直す。その繰り返しが、まだ世の中にないものを生み出す力になります。</p>
         <ul class="pills">
           <li>考える力</li>
           <li>予測を立てる力</li>
@@ -241,92 +218,106 @@
     </div>
   </section>
 
-  <!-- 07 講師紹介 -->
-  <section class="sec--beige teacher" id="teacher">
-    <div class="teacher__card">
-      <svg class="blob blob--teacher pc-only" aria-hidden="true"><rect width="100%" height="100%" fill="url(#dot-green)" clip-path="url(#blob-a)"/></svg>
-      <h2 class="ttl teacher__ttl"><span class="ttl__en" lang="en">Teacher</span><span class="ttl__ja bar-coral">講師紹介</span></h2>
-      <div class="teacher__media">
-        <picture>
-          <source media="(max-width:767px)" srcset="assets/img/teacher-still-sp.webp" width="636" height="560">
+  <!-- 講師紹介 -->
+  <section class="sec sec--pale teacher" id="teacher">
+    <div class="wrap">
+      <div class="sec-head sec-head--center reveal">
+        <p class="label" lang="en">Teacher</p>
+        <h2 class="ttl">講師紹介</h2>
+      </div>
+      <div class="teacher__in reveal">
+        <figure class="arch teacher__arch">
           <img src="assets/img/teacher-still.webp" width="880" height="1000" loading="lazy" alt="古い木の机に、葉を描いた絵とパレット、筆、素焼きの壺と粘土の造形が置かれている">
-        </picture>
-      </div>
-      <div class="teacher__body">
-        <h3 class="teacher__name">講師｜壁画アーティスト</h3>
-        <ul class="chips">
-          <li>日本画出身</li>
-          <li>現役の壁画アーティスト</li>
-          <li>FM横浜に出演</li>
-        </ul>
-        <p>女子美術大学 日本画専攻卒業。トリックアート美術館で壁画・造作の制作に携わったのち独立。現在は関東を中心に、手描き壁画、アートパネル、ミニチュアの制作などを手がけています。世田谷の絵画教室で2年以上講師を務め、個人宅への訪問レッスンも経験しています。</p>
+        </figure>
+        <div class="teacher__body">
+          <h3 class="teacher__name">講師｜壁画アーティスト</h3>
+          <ul class="pills">
+            <li>日本画出身</li>
+            <li>現役の壁画アーティスト</li>
+            <li>FM横浜に出演</li>
+          </ul>
+          <p>女子美術大学 日本画専攻卒業。トリックアート美術館で壁画・造作の制作に携わったのち独立。現在は関東を中心に、手描き壁画、アートパネル、ミニチュアの制作などを手がけています。世田谷の絵画教室で2年以上講師を務め、個人宅への訪問レッスンも経験しています。</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 08 教室の様子 -->
+  <!-- 教室の様子 -->
   <section class="sec insta">
-    <svg class="blob blob--insta pc-only" aria-hidden="true"><rect width="100%" height="100%" fill="url(#st-coral)" clip-path="url(#blob-c)"/></svg>
-    <h2 class="ttl ttl--center"><span class="ttl__en" lang="en">Instagram</span><span class="ttl__ja bar-coral">教室の様子</span></h2>
-    <p class="lead">制作中の作品や教室の様子を、Instagramで更新しています。</p>
-    <div class="ig-embeds">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DW8O9e0EUUl/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DW8O9e0EUUl/" target="_blank" rel="noopener">クレヨンの技法で描いたくじらの作品（Instagramで見る）</a></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DWDwP9JEXnP/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DWDwP9JEXnP/" target="_blank" rel="noopener">クレヨンのスクラッチアートの制作風景（Instagramで見る）</a></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DUj7gafEeFJ/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DUj7gafEeFJ/" target="_blank" rel="noopener">体験ワークショップのトートバッグ（Instagramで見る）</a></blockquote>
-    </div>
-    <p class="insta__more"><a class="btn-line" href="https://www.instagram.com/painting.art.class/" target="_blank" rel="noopener"><svg class="btn-line__ico" aria-hidden="true"><use href="#i-insta"/></svg>Instagramを見る</a></p>
-  </section>
-
-  <!-- 09 料金と時間 -->
-  <section class="sec sec--beige price" id="price">
-    <h2 class="ttl ttl--center"><span class="ttl__en" lang="en">Price</span><span class="ttl__ja bar-green">料金と時間</span></h2>
-    <div class="price__card">
-      <svg class="blob blob--price pc-only" aria-hidden="true"><rect width="100%" height="100%" fill="url(#dot-green)" clip-path="url(#blob-a)"/></svg>
-      <dl class="price__list">
-        <div><dt>月謝（小学生）</dt><dd>6,000円</dd></div>
-        <div><dt>月謝（中学生・高校生）</dt><dd>7,500円</dd></div>
-        <div><dt>月謝（大人）</dt><dd>9,000円</dd></div>
-        <div><dt>入会金</dt><dd>5,000円</dd></div>
-        <div><dt>年会費</dt><dd>なし</dd></div>
-        <div><dt>体験レッスン</dt><dd class="price__tbd">【要確認：体験レッスンの料金】</dd></div>
-      </dl>
-      <div class="price__time">
-        <div><p class="price__cls price__cls--adult">大人クラス</p><p class="price__when">第1〜第3金曜 13:30〜15:00</p></div>
-        <div><p class="price__cls price__cls--kids">子どもクラス</p><p class="price__when">第1〜第3金曜 16:00〜17:30</p></div>
+    <div class="wrap">
+      <div class="sec-head sec-head--center reveal">
+        <p class="label" lang="en">Instagram</p>
+        <h2 class="ttl">教室の様子</h2>
+        <p class="lead">制作中の作品や教室の様子を、Instagramで更新しています。</p>
       </div>
-      <p class="price__note">各回90分・月3回。画材はスターターセットの販売があります。特殊な画材を使う場合は、別途材料費をいただくことがあります。</p>
+      <div class="ig-embeds">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DW8O9e0EUUl/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DW8O9e0EUUl/" target="_blank" rel="noopener">クレヨンの技法で描いたくじらの作品（Instagramで見る）</a></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DWDwP9JEXnP/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DWDwP9JEXnP/" target="_blank" rel="noopener">クレヨンのスクラッチアートの制作風景（Instagramで見る）</a></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DUj7gafEeFJ/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DUj7gafEeFJ/" target="_blank" rel="noopener">体験ワークショップのトートバッグ（Instagramで見る）</a></blockquote>
+      </div>
+      <p class="center"><a class="btn btn--line" href="https://www.instagram.com/painting.art.class/" target="_blank" rel="noopener"><svg class="btn__ig" aria-hidden="true"><use href="#i-insta"/></svg>Instagramを見る</a></p>
     </div>
   </section>
 
-  <!-- 10 よくある質問 -->
+  <!-- 料金と時間 -->
+  <section class="sec sec--pale price" id="price">
+    <div class="wrap">
+      <div class="sec-head sec-head--center reveal">
+        <p class="label" lang="en">Price</p>
+        <h2 class="ttl">料金と時間</h2>
+      </div>
+      <div class="price__card reveal">
+        <dl class="price__list">
+          <div><dt>月謝（小学生）</dt><dd>6,000円</dd></div>
+          <div><dt>月謝（中学生・高校生）</dt><dd>7,500円</dd></div>
+          <div><dt>月謝（大人）</dt><dd>9,000円</dd></div>
+          <div><dt>入会金</dt><dd>5,000円</dd></div>
+          <div><dt>年会費</dt><dd>なし</dd></div>
+          <div><dt>体験レッスン</dt><dd class="tbd">【要確認：体験レッスンの料金】</dd></div>
+        </dl>
+        <div class="price__time">
+          <div><p class="price__cls">大人クラス</p><p>第1〜第3金曜 13:30〜15:00</p></div>
+          <div><p class="price__cls">子どもクラス</p><p>第1〜第3金曜 16:00〜17:30</p></div>
+        </div>
+        <p class="note">各回90分・月3回。画材はスターターセットの販売があります。特殊な画材を使う場合は、別途材料費をいただくことがあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- よくある質問 -->
   <section class="sec faq">
-    <svg class="blob blob--faq pc-only" aria-hidden="true"><rect width="100%" height="100%" fill="url(#st-green)" clip-path="url(#blob-c)"/></svg>
-    <h2 class="ttl ttl--center"><span class="ttl__en" lang="en">Q&amp;A</span><span class="ttl__ja bar-green">よくある質問</span></h2>
-    <dl class="faq__list">
-      <div>
-        <dt><span class="faq__mark faq__mark--q" lang="en">Q</span>絵を習うのは初めてです。大丈夫ですか？</dt>
-        <dd><span class="faq__mark faq__mark--a" lang="en">A</span><span>大丈夫です。基礎から、一人ひとりのペースに合わせて進めます。</span></dd>
+    <div class="wrap wrap--narrow">
+      <div class="sec-head sec-head--center reveal">
+        <p class="label label--pill" lang="en">Q&amp;A</p>
+        <h2 class="ttl">よくある質問</h2>
       </div>
-      <div>
-        <dt><span class="faq__mark faq__mark--q" lang="en">Q</span>画材は持っていく必要がありますか？</dt>
-        <dd><span class="faq__mark faq__mark--a" lang="en">A</span><span>スターターセットの販売があります。体験の持ち物は【要確認：体験レッスンの持ち物】</span></dd>
+      <div class="faq__list reveal">
+        <details>
+          <summary><span class="faq__q" lang="en">Q</span><span class="faq__qt">絵を習うのは初めてです。大丈夫ですか？</span><svg class="faq__chev" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+          <p class="faq__a">大丈夫です。基礎から、一人ひとりのペースに合わせて進めます。</p>
+        </details>
+        <details>
+          <summary><span class="faq__q" lang="en">Q</span><span class="faq__qt">画材は持っていく必要がありますか？</span><svg class="faq__chev" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+          <p class="faq__a">スターターセットの販売があります。体験の持ち物は【要確認：体験レッスンの持ち物】</p>
+        </details>
+        <details>
+          <summary><span class="faq__q" lang="en">Q</span><span class="faq__qt">見学だけでもできますか？</span><svg class="faq__chev" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+          <p class="faq__a">【要確認：見学の可否】</p>
+        </details>
+        <details>
+          <summary><span class="faq__q" lang="en">Q</span><span class="faq__qt">お休みした回の振替はできますか？</span><svg class="faq__chev" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+          <p class="faq__a">【要確認：振替の可否とルール】</p>
+        </details>
       </div>
-      <div>
-        <dt><span class="faq__mark faq__mark--q" lang="en">Q</span>見学だけでもできますか？</dt>
-        <dd><span class="faq__mark faq__mark--a" lang="en">A</span><span>【要確認：見学の可否】</span></dd>
-      </div>
-      <div>
-        <dt><span class="faq__mark faq__mark--q" lang="en">Q</span>お休みした回の振替はできますか？</dt>
-        <dd><span class="faq__mark faq__mark--a" lang="en">A</span><span>【要確認：振替の可否とルール】</span></dd>
-      </div>
-    </dl>
+    </div>
   </section>
 
-  <!-- 11 アクセス -->
-  <section class="sec--beige access" id="access">
-    <div class="access__card">
-      <div class="access__info">
-        <h2 class="ttl"><span class="ttl__en" lang="en">Access</span><span class="ttl__ja bar-coral">教室までのアクセス</span></h2>
+  <!-- アクセス -->
+  <section class="sec sec--pale access" id="access">
+    <div class="wrap access__in">
+      <div class="access__info reveal">
+        <p class="label" lang="en">Access</p>
+        <h2 class="ttl">教室までのアクセス</h2>
         <dl class="access__list">
           <div><dt>会場</dt><dd>古道カフェ ヱンルゥト 内</dd></div>
           <div><dt>住所</dt><dd>横浜市旭区中白根2-13-32 金子ハイツC-101</dd></div>
@@ -334,60 +325,69 @@
           <div><dt>お問い合わせ</dt><dd>InstagramのDM</dd></div>
         </dl>
       </div>
-      <div class="map">
+      <div class="map reveal">
         <svg class="map__roads" viewBox="0 0 480 400" preserveAspectRatio="none" aria-hidden="true">
           <g class="w5"><path d="M47 10 67 390M201 10 185 390M356 10 337 390M10 103 470 110M10 234 470 246M10 373 470 360"/></g>
           <g class="w3"><path d="M124 10 119 390M278 10 294 390M432 10 430 390M10 44 470 41M10 171 470 183M10 302 470 304"/></g>
         </svg>
         <div class="map__center">
-          <svg class="map__pin" viewBox="0 0 36 56" aria-hidden="true"><path fill="#2b7a4b" d="M18 0C8 0 0 8 0 18c0 12 12 26 18 38 6-12 18-26 18-38C36 8 28 0 18 0Z"/><circle cx="18" cy="18" r="7" fill="#fff"/></svg>
-          <a class="map__btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A8%AA%E6%B5%9C%E5%B8%82%E6%97%AD%E5%8C%BA%E4%B8%AD%E7%99%BD%E6%A0%B92-13-32" target="_blank" rel="noopener">Google マップで見る</a>
+          <svg class="map__pin" viewBox="0 0 36 56" aria-hidden="true"><path fill="currentColor" d="M18 0C8 0 0 8 0 18c0 12 12 26 18 38 6-12 18-26 18-38C36 8 28 0 18 0Z"/><circle cx="18" cy="18" r="7" fill="#fff"/></svg>
+          <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A8%AA%E6%B5%9C%E5%B8%82%E6%97%AD%E5%8C%BA%E4%B8%AD%E7%99%BD%E6%A0%B92-13-32" target="_blank" rel="noopener">Google マップで見る</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 12 体験申込 -->
-  <section class="trial" id="trial">
-    <svg class="blob blob--trial-dot" aria-hidden="true"><rect width="100%" height="100%" fill="url(#dot-coral)" clip-path="url(#blob-a)"/></svg>
-    <svg class="blob blob--trial-st" aria-hidden="true"><rect width="100%" height="100%" fill="url(#st-white)" clip-path="url(#blob-a)"/></svg>
-    <h2 class="trial__ttl"><span class="trial__en" lang="en">Trial</span><span class="trial__ja">まずは体験から</span></h2>
-    <p class="trial__lead">まずは体験レッスンから。<br class="sp">【要確認：体験レッスンの内容と料金】</p>
-    <div class="trial__btns">
-      <a class="btn btn--white" href="https://www.instagram.com/painting.art.class/" target="_blank" rel="noopener">体験を申し込む<svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      <a class="btn btn--ghost" href="https://www.instagram.com/painting.art.class/" target="_blank" rel="noopener"><svg class="btn__ig" aria-hidden="true"><use href="#i-insta"/></svg>InstagramのDMで相談</a>
+  <!-- 体験申込 -->
+  <section class="sec trial" id="trial">
+    <span class="shape shape--t1" aria-hidden="true"></span>
+    <span class="shape shape--t2" aria-hidden="true"></span>
+    <div class="wrap center reveal">
+      <p class="label" lang="en">Trial</p>
+      <h2 class="ttl">まずは体験から</h2>
+      <p class="lead">まずは体験レッスンから。<br class="sp">【要確認：体験レッスンの内容と料金】</p>
+      <div class="trial__btns">
+        <a class="btn btn--main" href="https://www.instagram.com/painting.art.class/" target="_blank" rel="noopener">体験を申し込む<svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--line" href="https://www.instagram.com/painting.art.class/" target="_blank" rel="noopener"><svg class="btn__ig" aria-hidden="true"><use href="#i-insta"/></svg>InstagramのDMで相談</a>
+      </div>
     </div>
   </section>
 </main>
 
-<!-- 13 フッター -->
 <footer class="ftr">
-  <div class="ftr__in">
-    <a class="ftr__logo" href="#top">
-      <svg class="ftr__mark" aria-hidden="true"><use href="#i-leaf"/></svg>
-      <span>アイビーオープン</span>
-    </a>
-    <p class="ftr__name">絵画・造形教室アイビーオープン</p>
-    <p class="ftr__addr">横浜市旭区中白根2-13-32 金子ハイツC-101（古道カフェ ヱンルゥト 内）</p>
-    <a class="ftr__ig" href="https://www.instagram.com/painting.art.class/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-insta"/></svg></a>
-    <nav class="ftr__nav" aria-label="フッターメニュー">
-      <ul>
-        <li><a href="#classes">子どもクラス</a></li>
-        <li><a href="#classes">大人クラス</a></li>
-        <li><a href="#teacher">講師紹介</a></li>
-        <li><a href="#price">料金</a></li>
-        <li><a href="#access">アクセス</a></li>
-        <li><a href="#trial">お問い合わせ</a></li>
-      </ul>
-    </nav>
-    <p class="ftr__op"><a href="https://artewald.com/" target="_blank" rel="noopener">運営：リーゼ（Risee）</a></p>
+  <div class="wrap ftr__in">
+    <div class="ftr__brand">
+      <a class="logo" href="#top">
+        <svg class="logo__mark" aria-hidden="true"><use href="#i-leaf"/></svg>
+        <span class="logo__txt"><span class="logo__name">アイビーオープン</span><span class="logo__sub">絵画・造形教室</span></span>
+      </a>
+      <p class="ftr__addr">横浜市旭区中白根2-13-32 金子ハイツC-101<br>（古道カフェ ヱンルゥト 内）</p>
+    </div>
+    <div class="ftr__side">
+      <nav class="ftr__nav" aria-label="フッターメニュー">
+        <ul>
+          <li><a href="#about">教室について</a></li>
+          <li><a href="#classes">クラス</a></li>
+          <li><a href="#materials">材料</a></li>
+          <li><a href="#teacher">講師紹介</a></li>
+          <li><a href="#price">料金</a></li>
+          <li><a href="#access">アクセス</a></li>
+        </ul>
+      </nav>
+      <div class="ftr__btns">
+        <a class="btn btn--main btn--sm" href="#trial">体験を申し込む</a>
+        <a class="btn btn--main btn--sm" href="https://www.instagram.com/painting.art.class/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
   </div>
-  <p class="ftr__copy">© アイビーオープン</p>
+  <div class="wrap ftr__bottom">
+    <p><a href="https://artewald.com/" target="_blank" rel="noopener">運営：リーゼ（Risee）</a></p>
+    <p>© アイビーオープン</p>
+  </div>
 </footer>
 
-<!-- 14 スマホ下端固定ボタン -->
 <div class="fixcta">
-  <a class="btn btn--fix" href="#trial">体験を申し込む<svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  <a class="btn btn--main" href="#trial">体験を申し込む<svg class="btn__ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
 </div>
 
 <script src="assets/js/main.js"></script>
