@@ -119,6 +119,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .hero__ph{position:relative;z-index:1;width:152px;aspect-ratio:1}
 .hero__ph::before{content:"";position:absolute;inset:var(--s16) calc(var(--s16) * -1) calc(var(--s16) * -1) var(--s16);background:var(--sub)}
 .hero__ph picture{display:contents}
+.hero__tag{position:absolute;z-index:2;left:0;bottom:var(--s8);padding:var(--s4) var(--s16);border-radius:4px;background:var(--main-d);color:#fff;font-weight:700;font-size:13px;line-height:24px;letter-spacing:.08em;white-space:nowrap}
+.hero__side--r .hero__tag{left:auto;right:calc(var(--s16) * -1)}
 .hero__ph img{position:relative;width:100%;height:100%;object-fit:cover}
 .hero__side--l .hero__ph::before,.hero__side--l .hero__ph img{border-radius:var(--drop-l)}
 .hero__side--r .hero__ph::before,.hero__side--r .hero__ph img{border-radius:var(--drop-r)}
@@ -137,7 +139,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .hero__split{position:relative}
 .hero__tate{position:absolute;z-index:3;right:var(--s8);top:calc(var(--hdr) + var(--s8));writing-mode:vertical-rl;font-weight:700;font-size:16px;line-height:28px;letter-spacing:.12em;color:var(--main-dd)}
 .hero__name{color:var(--main-dd);font-weight:700;font-size:36px;line-height:48px}
-.hero__gap{display:none}
 .hero__pre{display:block;font-size:18px;line-height:28px;letter-spacing:.12em;color:var(--ink)}
 .hero__main{display:block;margin-top:var(--s8);font-size:1em;line-height:inherit;letter-spacing:.12em}
 .hero__foot{padding:var(--s16) var(--page-x) var(--s32);text-align:center}
@@ -151,6 +152,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   .hero__side--l .hero__ph{margin-right:var(--s24)}
   .hero__side--r .hero__ph{margin-left:var(--s24)}
   .hero__body{padding-top:var(--s40)}
+  .hero__tag{font-size:16px;padding:var(--s8) var(--s16);bottom:var(--s16)}
   .hero__tate{right:auto;left:var(--s16);top:calc(var(--hdr) + var(--s24));font-size:22px;line-height:40px}
   .hero__pre{font-size:20px;line-height:32px}
   .hero__name{font-size:40px;line-height:56px}
@@ -170,8 +172,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   .hero__split{height:clamp(376px, calc(100svh - 392px), 600px)}
   .hero__ph{width:clamp(200px, calc(100svh - 560px), 288px)}
   .hero__tate{font-size:18px;line-height:32px;letter-spacing:.12em}
-  .hero__br{display:none}
-  .hero__gap{display:inline-block;width:1em}
 }
 @media (min-width:1024px) and (max-width:1279px){.hero__ph{width:clamp(200px, calc(100svh - 560px), 360px)}}
 @media (min-width:1280px){
@@ -376,6 +376,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .motion .hero__side--r .hero__ph{animation-delay:.15s}
 .motion .hero__pre{animation:fv-up .6s .1s cubic-bezier(.2,.7,.2,1) both}
 .motion .hero__main{animation:fv-up .6s .2s cubic-bezier(.2,.7,.2,1) both}
+.motion .hero__tag{animation:fv-up .6s .5s both}
 .motion .hero__tate{animation:fv-up .6s .4s both}
 .motion .hero__foot{animation:fv-up .6s .5s both}
 
