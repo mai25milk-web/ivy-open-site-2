@@ -1,13 +1,13 @@
 /* ② アイビーオープン TOP：くすんだ緑（メイン）＋淡い黄色（アクセント）＋グレー。アーチの写真と広い余白 */
 :root{
   --s4:4px;--s8:8px;--s16:16px;--s24:24px;--s32:32px;--s40:40px;--s48:48px;--s56:56px;--s64:64px;--s72:72px;--s80:80px;--s96:96px;--s120:120px;--s160:160px;
-  --main:#bfdccd;      /* 面の色（文字は乗せない） */
+  --main:#addfc4;      /* 面の色（文字は乗せない） */
   --main-d:#2f6650;    /* 文字・ボタン */
   --main-dd:#1f4535;   /* 緑の面の上の文字 */
   --pale:#e7f1ec;      /* 淡い緑の地 */
   --sub:#f6e3a1;       /* アクセント：淡い黄色（面だけ） */
   --sub-pale:#fbf4da;
-  --gray:#e1e5e3;
+  --hero-r:#fbefc6;   /* ヒーロー右（スマホは下）の淡い黄色 */
   --main-m:#9cc3af;    /* 淡い緑の地の上の飾り */
   --drop-l:58% 42% 50% 50% / 48% 54% 46% 52%;  /* ヒーローの写真：絵の具のしずくのような丸 */
   --drop-r:42% 58% 50% 50% / 54% 48% 52% 46%;
@@ -147,7 +147,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 /* ヒーロー：写真は絵の具のしずくのような丸い形 */
 .hero{position:relative;background:#fff}
 .hero__split{display:grid;grid-template-columns:1fr 1fr;height:360px}
-.hero__side--l{background:var(--main)}.hero__side--r{background:var(--gray)}
+.hero__side--l{background:var(--main)}.hero__side--r{background:var(--hero-r)}
+.hero__side--r .hero__ph::before{background:var(--main)}
 .hero__side{position:relative;display:flex;align-items:flex-end;justify-content:center;padding-bottom:var(--s32);overflow:hidden}
 .hero__ph{position:relative;z-index:1;width:152px;aspect-ratio:1}
 .hero__ph::before{content:"";position:absolute;inset:var(--s16) calc(var(--s16) * -1) calc(var(--s16) * -1) var(--s16);background:var(--sub)}
