@@ -23,7 +23,7 @@
 
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:#fff var(--canvas);color:var(--ink);font-family:var(--jp);font-weight:500;font-size:15px;line-height:2;letter-spacing:.06em;overflow-wrap:anywhere;line-break:strict;overflow-x:clip}
+body{margin:0;background:#fff var(--canvas);color:var(--ink);font-family:var(--jp);font-weight:500;font-size:15px;line-height:2;letter-spacing:.04em;overflow-wrap:anywhere;line-break:strict;overflow-x:clip}
 @media (min-width:768px){body{font-size:16px}}
 img{display:block;max-width:100%;height:auto}
 figure{margin:0}
@@ -47,10 +47,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .sec--pale{background:var(--pale) var(--canvas)}
 
 /* 見出し：英字の小ラベル＋和文。PC 56/40/28/20、SP 36/28/22/18 */
-.ttl{font-size:22px;line-height:36px;font-weight:700;letter-spacing:.12em;color:var(--main-dd)}
+.ttl{font-size:22px;line-height:36px;font-weight:700;letter-spacing:.08em;color:var(--main-dd)}
 @media (min-width:768px){.ttl{font-size:28px;line-height:44px}}
 .lead{margin-top:var(--s16);color:var(--muted)}
-.sec-head{margin-bottom:var(--s40)}
+.sec-head{margin-bottom:var(--s32)}
 @media (min-width:1024px){.sec-head{margin-bottom:var(--s56)}}
 
 /* ボタン：文字は矢印を除いた部分の中央 */
@@ -250,24 +250,23 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .points{display:grid;gap:var(--s64)}
 .pt{display:grid;gap:var(--s32);align-items:center}
 @media (min-width:768px){.pt{grid-template-columns:1fr 1fr;gap:var(--s64)}.pt:nth-child(even) .pt__ph{order:2}}
-.pt__ph{position:relative;width:min(280px,80%);margin-inline:auto}
-.pt__ph::before{content:"";position:absolute;inset:calc(var(--s16) * -1);border-radius:50%;background:var(--sub)}
-.pt__ph img{position:relative;width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%}
+.pt__ph{position:relative}
+.pt__ph img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
 /* 大きな数字：英字の丸い書体、緑の数字に黄色の線を重ねて手描きの下線のように */
 .pt__body{position:relative}
 .pt__no{position:relative;z-index:0;display:inline-block;font-family:var(--en);font-weight:700;font-size:72px;line-height:72px;color:var(--main-d);letter-spacing:0}
 .pt__no::after{content:"";position:absolute;z-index:-1;left:-8px;right:-16px;bottom:8px;height:16px;border-radius:8px;background:var(--sub);transform:rotate(-4deg)}
 @media (min-width:768px){.pt__no{font-size:96px;line-height:96px}.pt__no::after{height:24px;bottom:12px}}
-@media (min-width:768px){.pt__ph{width:100%;max-width:400px}}
+@media (min-width:768px){.pt{grid-template-columns:7fr 5fr}.pt:nth-child(even){grid-template-columns:5fr 7fr}}
 .pt__ttl{margin:var(--s16) 0 var(--s16);word-break:keep-all;font-size:18px;line-height:28px;font-weight:700;color:var(--main-dd)}
 @media (min-width:768px){.pt__ttl{font-size:20px;line-height:32px}}
 
 /* 考える力 */
-.think{padding-top:0}
-.think__in{display:grid;gap:var(--s56);align-items:center}
-.think__arch{width:min(280px,80%);margin-inline:auto}
-@media (min-width:768px){.think__in{grid-template-columns:5fr 7fr;gap:var(--s80)}.think__arch{width:100%;max-width:400px}}
-.think__body > p{margin-top:var(--s24)}
+.think{padding-block:var(--s80);background:var(--main-d);color:#fff}
+.think__in{display:grid;gap:var(--s24)}
+.think__ttl{font-size:28px;line-height:44px;font-weight:700;letter-spacing:.08em}
+.think p{max-width:34em;line-height:2.2}
+@media (min-width:768px){.think{padding-block:var(--s96)}.think__in{grid-template-columns:5fr 7fr;gap:var(--s64);align-items:end}.think__ttl{font-size:40px;line-height:64px}}
 
 /* 講師 */
 .teacher__in{display:grid;gap:var(--s56);align-items:center}
@@ -335,12 +334,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .access__list > div{display:grid;grid-template-columns:112px 1fr;gap:var(--s16);padding:var(--s16) 0;border-bottom:1px dashed var(--line)}
 .access__list dt{font-weight:700;color:var(--main-dd)}
 .map{position:relative;aspect-ratio:6/5;overflow:hidden;border-radius:16px;background:#fff}
-.map__roads{position:absolute;inset:0;width:100%;height:100%}
-.map__roads path{fill:none;stroke:var(--pale)}
-.map__roads .w5 path{stroke-width:10}
-.map__roads .w3 path{stroke-width:5}
-.map__center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--s16)}
-.map__pin{width:40px;height:64px;color:var(--main-d)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.more--s{margin-top:var(--s8);font-size:14px}
 
 /* 体験 */
 .trial{overflow:hidden;background:#2a2f2d;color:#fff}
