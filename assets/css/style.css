@@ -401,3 +401,16 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .nf .btn{padding-inline:var(--s32)}
 .ftr__btns{align-items:center}
 .ftr__ig-link{font-weight:700;font-size:14px;color:var(--main-d);text-decoration:underline;text-underline-offset:6px}
+
+/* スクロールの動きは2か所だけ。全部をふわっと出さない */
+/* 特徴の番号：下の黄色い線を、筆で引くように左から伸ばす */
+.motion .pt__no::after{transform:rotate(-4deg) scaleX(0);transform-origin:left center;transition:transform .7s cubic-bezier(.65,0,.35,1) .15s}
+.motion .pt__no.is-in::after{transform:rotate(-4deg) scaleX(1)}
+/* 講師の壁画：下から塗っていくように現れる。間隔はわざと不揃い */
+.motion .works__item img{clip-path:inset(100% 0 0 0);transition:clip-path 1s cubic-bezier(.65,0,.35,1)}
+.motion .works.is-in .works__item img{clip-path:inset(0)}
+.motion .works__item:nth-child(2) img{transition-delay:.18s}
+.motion .works__item:nth-child(3) img{transition-delay:.3s}
+.motion .works__item:nth-child(4) img{transition-delay:.38s}
+.motion .works__item:nth-child(5) img{transition-delay:.12s}
+.motion .works__item:nth-child(6) img{transition-delay:.26s}

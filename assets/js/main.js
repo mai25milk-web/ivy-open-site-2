@@ -54,3 +54,18 @@
   }, { rootMargin: '800px 0px' });
   io.observe(sec);
 })();
+
+// 画面に入ったら is-in を付ける（特徴の番号の線・講師の壁画）。一度だけ
+(function () {
+  var els = document.querySelectorAll('.pt__no, .works');
+  if (!('IntersectionObserver' in window)) {
+    for (var i = 0; i < els.length; i++) els[i].classList.add('is-in');
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -15% 0px' });
+  for (var j = 0; j < els.length; j++) io.observe(els[j]);
+})();
