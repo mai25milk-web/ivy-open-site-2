@@ -348,8 +348,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--coral-d);outline-of
   .gnav ul{padding:var(--sp-4) var(--sp-24) var(--sp-12)}
 
   /* ヒーロー（SP：上＝大人の後ろ姿、下＝子どもの手元。人物が曲線で切れない向き） */
-  .hero{--hero-h:clamp(240px,calc(100vh - var(--hdr) - 320px),480px);padding-bottom:var(--sp-64)}
-  @supports (height:100svh){.hero{--hero-h:clamp(240px,calc(100svh - var(--hdr) - 320px),480px)}}
+  .hero{--hero-h:clamp(240px,calc(100vh - var(--hdr) - 420px),480px);padding-bottom:var(--sp-64)}
+  @supports (height:100svh){.hero{--hero-h:clamp(240px,calc(100svh - var(--hdr) - 420px),480px)}}
   .hero__visual{width:calc(100% - 32px);max-width:none;margin-top:var(--sp-8);border-radius:28px}
   .hero__side--b img{left:0;top:0;width:100%;height:60%;object-position:50% 30%}
   .hero__side--a img{left:0;top:46%;width:100%;height:54%;object-position:50% 0}
@@ -566,3 +566,19 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--coral-d);outline-of
 .hero__badge:hover{background:var(--coral-dd)}
 .trial .btn--ghost{border-color:var(--mint-ink);color:var(--mint-ink)}
 .trial .btn--ghost:hover{background:var(--mint-d)}
+
+/* キャッチコピー「9つの材料で　気持ちをかたちに」 */
+.hero__catch{margin-top:var(--sp-8);font-size:56px;line-height:72px;font-weight:900;letter-spacing:.04em;color:var(--ink)}
+.hero__catch span{display:inline-block}
+.hero__catch span+span{margin-left:.5em}
+.hero .hero__name{margin-top:var(--sp-16);font-size:20px;line-height:32px;font-weight:700;letter-spacing:.04em}
+.hero__name-brand{margin-left:.5em;color:var(--green)}
+.motion .hero__catch{animation:mRise .9s ease calc(var(--t0) + .7s) both}
+.skip .hero__catch{animation:none!important}
+@media (max-width:767px){
+  .hero__catch{margin-top:var(--sp-4);font-size:36px;line-height:48px;letter-spacing:.02em}
+  .hero__catch span{display:block}
+  .hero__catch span+span{margin-left:0}
+  .hero .hero__name{margin-top:var(--sp-8);font-size:18px;line-height:28px}
+  .hero__name-brand{display:block;margin-left:0}
+}
