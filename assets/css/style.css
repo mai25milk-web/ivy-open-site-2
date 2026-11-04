@@ -3,9 +3,9 @@
   /* 余白トークン（8の倍数。4・12は細部だけ） */
   --sp-4:4px;--sp-8:8px;--sp-12:12px;--sp-16:16px;--sp-24:24px;--sp-32:32px;--sp-40:40px;--sp-48:48px;--sp-56:56px;--sp-64:64px;--sp-72:72px;--sp-80:80px;--sp-88:88px;--sp-96:96px;--sp-104:104px;--sp-120:120px;--sp-152:152px;--sp-160:160px;
   /* 色：メイン＝緑、アクセント＝コーラル、ほかは無彩色。文字に使う色は白・ベージュの上で4.5以上 */
-  --green:#2f7046;--green-d:#245a37;
-  --coral:#ee7a5f;--coral-d:#b9472e;--coral-dd:#9c3a25; /* --coral は飾り（ドット・しま）だけ。文字と白文字の地は --coral-d */
-  --beige:#f3f2ea;--ink:#333;--ink-d:#1f1f1f;--muted:#6e6c64;--rule:#d9d6c8;
+  --green:#2b7a4b;--green-d:#23633d;--mint:#96eec3;--mint-d:#7fe3b2;--mint-ink:#1f3d30;
+  --coral:#c9b1df;--coral-d:#6b5a9e;--coral-dd:#5a4b88; /* --coral は飾り（ドット・しま）だけ。文字と白文字の地は --coral-d */
+  --beige:#e5faef;--ink:#333;--ink-d:#1f1f1f;--muted:#6e6c64;--rule:#d9d6c8;
   --ease:.4s cubic-bezier(.4,.4,0,1);
   --hdr:100px;
   --jp:"Zen Maru Gothic",sans-serif;
@@ -62,7 +62,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--coral-d);outline-of
 .btn--hdr:hover .btn__ico{--arrow:var(--green-d)}
 .btn--white{width:288px;height:64px;background:#fff;color:var(--green);font-size:17px}
 .btn--white .btn__ico{color:var(--green);--arrow:#fff}
-.btn--white:hover{background:#e6e4d8}
+.btn--white:hover{background:#d3f5e3}
 .btn--ghost{width:288px;height:64px;padding:0 var(--sp-24) 0 var(--sp-72);border:2px solid #fff;color:#fff;font-size:15px}
 .btn--ghost:hover{background:var(--green-d)}
 .btn__ig{position:absolute;left:24px;top:50%;width:24px;height:24px;margin-top:-12px}
@@ -74,7 +74,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--coral-d);outline-of
 .btn--main:hover{background:var(--green-d)}
 .btn--main:hover .btn__ico{--arrow:var(--green-d)}
 .btn-line{position:relative;display:flex;align-items:center;justify-content:center;width:296px;height:56px;margin:auto;padding:0 var(--sp-24) 0 var(--sp-72);border:2px solid var(--ink);border-radius:999px;font-size:16px;font-weight:700;transition:background-color var(--ease)}
-.btn-line:hover{background:#e6e4d8}
+.btn-line:hover{background:#d3f5e3}
 .btn-line__ico{position:absolute;left:24px;top:50%;width:24px;height:24px;margin-top:-12px}
 
 /* ===== タグ ===== */
@@ -249,14 +249,14 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--coral-d);outline-of
 .access__list>div{display:flex;align-items:center;min-height:60px;border-bottom:2px solid var(--rule)}
 .access__list dt{flex:none;width:130px;font-size:16px;line-height:23px;font-weight:700}
 .access__list dd{font-size:15px;line-height:22px}
-.map{position:relative;height:400px;margin-top:var(--sp-16);border-radius:24px;overflow:hidden;background:#e7e5da}
+.map{position:relative;height:400px;margin-top:var(--sp-16);border-radius:24px;overflow:hidden;background:#d3f5e3}
 .map__roads{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:#fff}
 .map__roads path{vector-effect:non-scaling-stroke}
 .map__roads .w5{stroke-width:6}.map__roads .w3{stroke-width:3}
 .map__center{position:absolute;left:50%;top:166px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center}
 .map__pin{display:block;width:36px;height:56px}
 .map__btn{display:flex;align-items:center;justify-content:center;width:160px;height:34px;margin-top:var(--sp-12);border-radius:999px;background:#fff;font-size:13px;font-weight:700;white-space:nowrap;transition:background-color var(--ease)}
-.map__btn:hover{background:#e6e4d8}
+.map__btn:hover{background:#d3f5e3}
 
 /* ===== 12 体験 ===== */
 .trial{position:relative;overflow:hidden;padding:var(--sp-80) var(--sp-24) var(--sp-96);background:var(--green);color:#fff;text-align:center}
@@ -518,7 +518,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--coral-d);outline-of
 :root{--t0:.1s;--ease-m:cubic-bezier(.65,0,.35,1)}
 .splash-on{--t0:1.4s}
 .splash{display:none}
-.splash-on .splash{display:flex;position:fixed;inset:0;z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:var(--sp-8);background:#22402f;color:#fff;animation:mSplashOut .6s var(--ease-m) 1.2s both}
+.splash-on .splash{display:flex;position:fixed;inset:0;z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:var(--sp-8);background:var(--green-d);color:#fff;animation:mSplashOut .6s var(--ease-m) 1.2s both}
 .splash__logo{display:flex;flex-direction:column;align-items:center;gap:var(--sp-8);animation:mRise .8s ease .1s both}
 .splash__name{font-size:clamp(30px,4vw,44px);font-weight:900;letter-spacing:.04em}
 .splash__sub{font-size:clamp(13px,1.4vw,16px);font-weight:700;letter-spacing:.2em}
@@ -558,3 +558,11 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--coral-d);outline-of
 }
 .insta .ig-embeds{max-width:1120px;margin:var(--sp-40) auto 0;padding:0 var(--sp-40)}
 @media (max-width:767px){.insta .ig-embeds{margin-top:var(--sp-24);padding:0 var(--sp-24) var(--sp-8)}}
+/* 配色J（HugMug系：ミント＋ラベンダー）。明るいミントのボタンには濃い緑の文字 */
+.btn--hdr,.btn--fix,.btn--main{background:var(--mint);color:var(--mint-ink);--arrow:var(--mint)}
+.btn--hdr:hover,.btn--fix:hover,.btn--main:hover{background:var(--mint-d)}
+.trial{background:var(--mint);color:var(--mint-ink)}
+.hero__badge{background:var(--coral-d)}
+.hero__badge:hover{background:var(--coral-dd)}
+.trial .btn--ghost{border-color:var(--mint-ink);color:var(--mint-ink)}
+.trial .btn--ghost:hover{background:var(--mint-d)}
