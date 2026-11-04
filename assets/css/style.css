@@ -15,7 +15,7 @@
   --ink:#383e3c;--muted:#59605d;--line:#d3ddd8;
   --jp:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;
   --en:"Quicksand","Zen Maru Gothic",sans-serif;
-  --hdr:80px;--page-x:16px;
+  --hdr:80px;--hero-mid:560px;--page-x:16px;
   --ease:.6s cubic-bezier(.2,.6,.2,1);
 }
 @media (min-width:768px){:root{--page-x:40px}}
@@ -57,7 +57,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 
 /* ボタン：文字は矢印を除いた部分の中央 */
 .btn{position:relative;display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:var(--s16) var(--s64) var(--s16) var(--s24);border-radius:999px;font-weight:700;font-size:16px;line-height:24px;letter-spacing:.08em;text-decoration:none;transition:background-color .3s,color .3s}
-.btn__ico{position:absolute;right:var(--s16);top:50%;width:32px;height:32px;margin-top:-16px;color:#fff;--arrow:var(--main-d);transition:transform .3s}
+.btn__ico{position:absolute;right:var(--s16);top:50%;width:32px;height:32px;margin-top:calc(var(--s16) * -1);color:#fff;--arrow:var(--main-d);transition:transform .3s}
 .btn--main{background:var(--main-d);color:#fff}
 .btn--main:hover{background:var(--main-dd)}
 .btn--main:hover .btn__ico{transform:translateX(4px);--arrow:var(--main-dd)}
@@ -151,17 +151,16 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .hero__side{position:relative;display:flex;align-items:flex-end;justify-content:center;padding-bottom:var(--s32);overflow:hidden}
 .hero__ph{position:relative;z-index:1;width:152px;aspect-ratio:1}
 .hero__ph::before{content:"";position:absolute;inset:var(--s16) calc(var(--s16) * -1) calc(var(--s16) * -1) var(--s16);background:var(--sub)}
+.hero__ph picture{display:contents}
 .hero__ph img{position:relative;width:100%;height:100%;object-fit:cover}
 .hero__side--l .hero__ph::before,.hero__side--l .hero__ph img{border-radius:var(--drop-l)}
 .hero__side--r .hero__ph::before,.hero__side--r .hero__ph img{border-radius:var(--drop-r)}
 .hero__side--l .hero__ph{margin-right:var(--s16)}
 .hero__side--r .hero__ph{margin-left:var(--s16)}
-.hero__side--l img{object-position:30% 50%}
-.hero__side--r img{object-position:72% 50%}
 @media (max-width:767px){
-  .hero__split{grid-template-columns:1fr;grid-template-rows:208px 192px;height:400px}
+  .hero__split{grid-template-columns:1fr;grid-template-rows:52fr 48fr;height:clamp(320px, calc(100svh - 412px), 400px)}
   .hero__side{overflow:visible;padding-bottom:0}
-  .hero__ph{width:144px}
+  .hero__ph{width:clamp(112px, calc(100svh - 668px), 144px)}
   .hero__side--l{z-index:2;justify-content:flex-start;padding-left:var(--s24)}
   .hero__side--l .hero__ph{margin:0 0 calc(var(--s64) * -1)}
   .hero__side--r{justify-content:flex-end;padding:0 var(--s40) var(--s24) 0}
@@ -196,14 +195,20 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   .hero__catch{font-size:56px;line-height:80px}
   .hero__name{font-size:20px;line-height:32px}
 }
+@media (min-width:768px) and (max-width:1279px){
+  /* タブレット・狭いPC：画面の高さに合わせて写真の面を縮め、ボタンまで1画面に入れる */
+  .hero__split{height:clamp(376px, calc(100svh - 392px), 600px)}
+  .hero__ph{width:clamp(200px, calc(100svh - 560px), 288px)}
+}
+@media (min-width:1024px) and (max-width:1279px){.hero__ph{width:clamp(200px, calc(100svh - 560px), 360px)}}
 @media (min-width:1280px){
   /* 広い画面：コピーは2色の境目の上（中央）に置く。中央の幅は 560px */
   .hero__split{height:640px}
-  .hero__ph{width:calc((100vw - 560px) / 2 - var(--s64));max-width:400px}
+  .hero__ph{width:calc((100vw - var(--hero-mid)) / 2 - var(--s64));max-width:400px}
   .hero__side--l{justify-content:flex-start;padding-left:var(--s64)}
   .hero__side--r{justify-content:flex-end;padding-right:var(--s64)}
   .hero__side--l .hero__ph,.hero__side--r .hero__ph{margin:0}
-  .hero__body{position:absolute;inset:var(--hdr) 0 auto;height:calc(640px - var(--hdr));display:flex;flex-direction:column;justify-content:center;padding:0 calc((100vw - 560px) / 2);pointer-events:none}
+  .hero__body{position:absolute;inset:var(--hdr) 0 auto;height:calc(640px - var(--hdr));display:flex;flex-direction:column;justify-content:center;padding:0 calc((100vw - var(--hero-mid)) / 2);pointer-events:none}
   .hero__catch span{display:block;white-space:nowrap}
   .hero__catch span + span{margin-left:0}
   .hero__name{margin-top:var(--s24)}
@@ -375,6 +380,16 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .fixcta.is-on{transform:none}
 .fixcta .btn{width:100%}
 @media (min-width:1024px){.fixcta{display:none}}
+
+/* FV：写真がふくらむように出て、コピー・ボタンが続く（合計1.4秒以内） */
+@keyframes fv-pop{from{opacity:0;transform:scale(.88)}to{opacity:1;transform:none}}
+@keyframes fv-up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.motion .hero__ph{animation:fv-pop .8s cubic-bezier(.2,.7,.2,1) both}
+.motion .hero__side--r .hero__ph{animation-delay:.15s}
+.motion .hero__catch span{animation:fv-up .7s .3s cubic-bezier(.2,.7,.2,1) both}
+.motion .hero__catch span + span{animation-delay:.45s}
+.motion .hero__name{animation:fv-up .6s .6s both}
+.motion .hero__foot{animation:fv-up .6s .75s both}
 
 /* ふわっと出る */
 .motion .reveal{opacity:0;transform:translateY(24px);transition:opacity var(--ease),transform var(--ease)}
